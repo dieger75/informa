@@ -95,11 +95,10 @@
             overflow-x: hidden;
             /* Prevent scroll on narrow devices */
         }
-
         body {
             display: none;
+            padding-top: 77px;
         }
-
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
                 position: fixed;
@@ -112,54 +111,42 @@
                 padding-left: 1rem;
                 overflow-y: auto;
                 visibility: hidden;
-                background-color: #343a40;
+                background-color: #fff;
                 transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             }
-
             .offcanvas-collapse.open {
                 visibility: visible;
                 transform: translateX(-100%);
             }
         }
-
         .nav-scroller .nav {
             color: rgba(255, 255, 255, .75);
         }
-
         .nav-scroller .nav-link {
             padding-top: .75rem;
             padding-bottom: .75rem;
             font-size: .875rem;
             color: #6c757d;
         }
-
         .nav-scroller .nav-link:hover {
             color: #007bff;
         }
-
         .nav-scroller .active {
             font-weight: 500;
             color: #343a40;
         }
-
-        .bg-purple {
-            background-color: #6f42c1;
-        }
-
         /* ============ desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .has-megamenu {
                 position: static !important;
             }
-
             .navbar .megamenu {
                 left: 0;
                 right: 0;
                 width: 100%;
-                margin-top: 0;
+                margin-top: -1px;
             }
         }
-
         .bg-header {
             background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp); 
             background-position: center;
@@ -251,10 +238,7 @@
                 });
             });
             // Carga el footer desde partials/footer.html
-            //loadHTML("footer", "partials/footer.html");
-            loadHTML("footer", "partials/footer.html", function () {
-                observeLazyLoadImages(); // Llamar a la función para observar las imágenes después de cargar el footer
-            });
+            loadHTML("footer", "partials/footer.html");
         });
         // DOMContentLoaded  end
     </script>
@@ -274,12 +258,12 @@
         <div class="container py-5">
             <div class="row py-5">
                 <div class="col-lg-6 overflow-hidden">
-                    <div class="py-5 ps-5 bg-white animate__animated animate__fadeInLeft animate__faster mb-5 line-brand">
+                    <div class="mb-5 py-5 ps-5 bg-white animate__animated animate__fadeInLeft line-brand">
                         <p class="mb-3 lead text-primary">INFORME DE</p>
                         <h1 class="mb-3 text-primary">Sostenibilidad <span class="text-secondary">2023</span></h1>
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="" type="button" class="btn btn-primary btn-md px-4 me-md-2">Descargar el Informe en PDF</a>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start  overflow-hidden">
+                        <a href="" type="button" class="btn btn-primary animate__animated animate__fadeInLeft">Descargar el Informe en PDF</a>
                         <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
                     </div>
                 </div>
