@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-ES">
+
 <head>
     <!-- TITLE -->
     <title>Informe de Sostenibilidad | Informa</title>
@@ -38,7 +39,7 @@
     <meta name="twitter:title" content="Informe de Sostenibilidad | Informa">
     <meta name="twitter:description" content="Informe de Sostenibilidad 2023 de Informa, una compañía de Grupo Cesce">
     <!-- <meta name="twitter:image" content="https://www.informa.es/assets/img/twitter-card.jpg"> -->
-     
+
     <!-- cambiar contenido de la imagen -->
     <meta name="twitter:site" content="@informa_es">
     <meta name="twitter:creator" content="@informa_es">
@@ -55,35 +56,66 @@
     <!-- Preload critical fonts -->
     <link rel="preload" href="/assets/fonts/noway/noway-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/noway/noway-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/noway/noway-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/noway/noway-medium.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/noway/noway-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <noscript>
+
+    </noscript>
 
     <!-- Preload critical CSS -->
-    <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.min.css">
     </noscript>
 
     <!-- Inline Critical CSS -->
-    <style>
-        body {
-            display: none;
-            font-family: 'Roboto', sans-serif;
+    <style type="text/css">
+        .navbar .megamenu {
+            padding: 1rem;
         }
-        .header-bg {
-            background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .has-megamenu {
+                position: static !important;
+            }
+            .navbar .megamenu {
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin-top: 0;
+            }
         }
+        /* ============ desktop view .end// ============ */
+        /* ============ mobile view ============ */
+        @media(max-width: 991px) {
+
+            .navbar.fixed-top .navbar-collapse,
+            .navbar.sticky-top .navbar-collapse {
+                overflow-y: auto;
+                max-height: 90vh;
+                margin-top: 10px;
+            }
+        }
+
+        /* ============ mobile view .end// ============ */
     </style>
 
     <!-- Main CSS -->
@@ -119,39 +151,18 @@
     <!-- ******* End Preload and Load CSS No Critical ******* -->
 
     <!-- JQuery Core y Bootstrap -->
-    <script src="assets/js/core/bootstrap-5.3.3/bootstrap.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Función para cargar HTML en un elemento con una función de callback
-            function loadHTML(elementId, url, callback) {
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById(elementId).innerHTML = data;
-                        document.body.style.display = 'block'; // Mostrar el cuerpo después de cargar el header
-                        if (callback) {
-                            callback();
-                        }
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:', error);
-                    });
-            }
-            // Carga el header desde partials/header.html y añade el event listener una vez cargado
-            loadHTML("navbar", "partials/navbar.html", function () {
-                document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
-                    document.querySelector('.offcanvas-collapse').classList.toggle('open');
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(){
+            /////// Prevent closing from click inside dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                element.addEventListener('click', function (e) {
+                    e.stopPropagation();
                 });
-            });
-            // Carga el footer desde partials/footer.html
-            loadHTML("footer", "partials/footer.html");
-        });
+            })
+        }); 
+        // DOMContentLoaded  end
     </script>
+
     <!-- Load JS for IE8 Support -->
     <!-- Incluye polyfills para soportar HTML5 y media queries en navegadores antiguos como IE8. -->
     <!--[if lt IE 9]>
@@ -159,8 +170,89 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
+
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-white" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Dropdown right </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Mega menu  </a>
+                        <div class="dropdown-menu megamenu" role="menu">
+                            <div class="row g-3">
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu One</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>    
+                                <div class="col-lg-3 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row --> 
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                </ul>
+            </div> <!-- navbar-collapse.// -->
+        </div> <!-- container-fluid.// -->
     </nav>
     <header class="bg-light header-bg">
         <div class="container col-xxl-8 px-4 py-5">
@@ -180,17 +272,25 @@
             </div>
         </div>
     </header>
-    <main>   
+    <main>
         <section id="" class="py-5">
             <div class="container">
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus, nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum? Ex, animi possimus.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi illum minima sed non.</p>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus,
+                    nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum?
+                    Ex, animi possimus.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus
+                    maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi
+                    illum minima sed non.</p>
             </div>
         </section>
         <section id="" class="py-5">
             <div class="container">
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus, nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum? Ex, animi possimus.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi illum minima sed non.</p>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus,
+                    nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum?
+                    Ex, animi possimus.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus
+                    maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi
+                    illum minima sed non.</p>
             </div>
         </section>
         <section id="" class="py-5">
@@ -265,14 +365,17 @@
                     </div>
                 </div>
             </div>
-        </section>     
-        <section id="" class="lazy-background container d-flex align-items-center" data-bg="/assets/images/svg/03.-información judicial y concursal.svg">
+        </section>
+        <section id="" class="lazy-background container d-flex align-items-center"
+            data-bg="/assets/images/svg/03.-información judicial y concursal.svg">
             <div class="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti tenetur nihil deserunt aliquid velit expedita asperiores vitae numquam natus atque iure nulla libero, porro amet qui excepturi fugiat fuga rem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti tenetur nihil deserunt aliquid
+                    velit expedita asperiores vitae numquam natus atque iure nulla libero, porro amet qui excepturi
+                    fugiat fuga rem.</p>
             </div>
         </section>
     </main>
-    
+
     <footer id="footer"></footer>
     <!-- Scripts principales al final del body -->
     <!-- <script src="assets/js/main/jquery.appear.js" defer></script>
@@ -287,4 +390,5 @@
     <script src="assets/js/main/lazyload.js" defer></script>
     <script src="/assets/js/core/bootstrap-5.3.3/bootstrap.bundle.js" defer></script>
 </body>
+
 </html>
