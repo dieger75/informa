@@ -75,6 +75,7 @@
         crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff"
         crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp" as="image">
     <noscript>
 
     </noscript>
@@ -83,10 +84,11 @@
     <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css">
     </noscript>
 
     <!-- Inline Critical CSS -->
+
     <style type="text/css">
         html,
         body {
@@ -101,7 +103,7 @@
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
                 position: fixed;
-                top: 56px;
+                top: 77px;
                 /* Height of navbar */
                 bottom: 0;
                 left: 100%;
@@ -159,10 +161,20 @@
         }
 
         .bg-header {
-            background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp);
+            background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp); 
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+            height: 70vh;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .line-brand {
+            background-image: url(/assets/images/svg/line-brand.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         /* ============ mobile view .end// ============ */
@@ -228,9 +240,21 @@
                 document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
                     document.querySelector('.offcanvas-collapse').classList.toggle('open');
                 });
+                // Añadir event listeners a los enlaces del menú
+                document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function (element) {
+                    element.addEventListener('click', function (event) {
+                        // Solo cerrar el menú si el enlace no es parte de un dropdown
+                        if (!event.target.closest('.dropdown-toggle')) {
+                            document.querySelector('.offcanvas-collapse').classList.remove('open');
+                        }
+                    });
+                });
             });
             // Carga el footer desde partials/footer.html
-            loadHTML("footer", "partials/footer.html");
+            //loadHTML("footer", "partials/footer.html");
+            loadHTML("footer", "partials/footer.html", function () {
+                observeLazyLoadImages(); // Llamar a la función para observar las imágenes después de cargar el footer
+            });
         });
         // DOMContentLoaded  end
     </script>
@@ -244,38 +268,38 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
+    <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top py-3" aria-label="Main navigation">
     </nav>
-    <header class="bg-light bg-header">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6"></div>
+    <header class="bg-light bg-header justify-content-end">
+        <div class="container py-5">
+            <div class="row py-5">
                 <div class="col-lg-6 overflow-hidden">
-                    <h1 class="mb-3 animate__animated animate__fadeInLeft animate__faster">Titlo web</h1>
-                    <h2 class="mb-3 animate__animated animate__fadeInLeft">Titlo web</h2>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                        world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                        responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div class="py-5 ps-5 bg-white animate__animated animate__fadeInLeft animate__faster mb-5 line-brand">
+                        <p class="mb-3 lead text-primary">INFORME DE</p>
+                        <h1 class="mb-3 text-primary">Sostenibilidad <span class="text-secondary">2023</span></h1>
+                    </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                        <a href="" type="button" class="btn btn-primary btn-md px-4 me-md-2">Descargar el Informe en PDF</a>
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
                     </div>
                 </div>
+                <div class="col-10 col-sm-8 col-lg-6"></div>
             </div>
         </div>
     </header>
     <main>
-        <section id="" class="py-5">
-            <div class="container">
+        <section id="welcome" class="py-5">
+            <div class="container py-5">
                 <h2 class="text-center">Carta de Bienvenida</h2>
-                <div class="row">
-                    <div class="col-4">
+                <hr class="hr pb-5" />
+                <div class="row g-5">
+                    <div class="col-lg-5">
                         <!-- Imagen con lazy loading -->
-                        <img class="lazy" data-src="/assets/images/logos/postitivo.svg" alt="Descripción de la imagen">
-                    </div>
-                    <div class="col-8">
+                        <img class="lazy" data-src="/assets/images/links-1/Fernando Salazar.jpg" alt="Descripción de la imagen">
                         <h3>Fernando Salazar</h3>
-                        <h5>Presidente de INFORMA</h5>
+                        <p class="lead">Presidente de INFORMA</p>
+                    </div>
+                    <div class="col-lg-7">
                         <p>Estimados amigos y colaboradores,</p>
                         <p>Me dirijo a vosotros con motivo de la presentación de nuestro Informe de Sostenibilidad 2023, un documento que refleja nuestro sólido compromiso con el desarrollo sostenible y nuestra dedicación a la excelencia empresarial.</p>
                         <p>En 2023 hemos dado pasos significativos en la integración de los factores ESG (ambientales, sociales y de gobernanza) en nuestra estrategia de negocio, reafirmando nuestra adhesión al Pacto Mundial de las Naciones Unidas y nuestra contribución activa a los Objetivos de Desarrollo Sostenible (ODS).</p>
@@ -286,23 +310,16 @@
                         <p>Atentamente,</p>
                         <p>Fernando Salazar</p>
                         <p>Presidente de Informa D&B</p>
-
+                        <div class="d-flex justify-content-end">
+                            <a href="" type="button" class="btn btn-primary">Carta del CEO</a>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        </section>
-        <section id="" class="lazy-background container d-flex align-items-center"
-            data-bg="/assets/images/svg/03.-información judicial y concursal.svg">
-            <div class="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti tenetur nihil deserunt aliquid
-                    velit expedita asperiores vitae numquam natus atque iure nulla libero, porro amet qui excepturi
-                    fugiat fuga rem.</p>
             </div>
         </section>
     </main>
 
-    <footer id="footer"></footer>
+    <footer id="footer" class="bg-primary py-5"></footer>
     <!-- Scripts principales al final del body -->
     <!-- <script src="assets/js/main/jquery.appear.js" defer></script>
     <script src="assets/js/main/isotope.pkgd.min.js" defer></script>
@@ -313,8 +330,9 @@
     <script src="assets/js/main/ion.rangeSlider.min.js" defer></script>
     <script src="assets/js/main/jquery.backgroundvideo.js" defer></script>
     <script src="assets/js/main/imagesloaded.pkgd.min.js" defer></script>-->
-    <script src="assets/js/main/lazyload.js" defer></script>
+    
     <script src="/assets/js/core/bootstrap-5.3.3/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/main/lazyload.js" defer></script>
 </body>
 
 </html>
