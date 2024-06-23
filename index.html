@@ -94,9 +94,9 @@
             /* Prevent scroll on narrow devices */
         }
 
-        /* body {
-            padding-top: 56px;
-        } */
+        body {
+            display: none;
+        }
 
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
@@ -194,12 +194,34 @@
     <!-- JQuery Core y Bootstrap -->
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-            /////// Prevent closing from click inside dropdown
-            document.querySelectorAll('.dropdown-menu').forEach(function (element) {
-                element.addEventListener('click', function (e) {
-                    e.stopPropagation();
+            // Función para cargar HTML en un elemento con una función de callback
+            function loadHTML(elementId, url, callback) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                        document.body.style.display = 'block'; // Mostrar el cuerpo después de cargar el header
+                        if (callback) {
+                            callback();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+            }
+            // Carga el header desde partials/header.html y añade el event listener una vez cargado
+            loadHTML("navbar", "partials/navbar.html", function () {
+                document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
+                    document.querySelector('.offcanvas-collapse').classList.toggle('open');
                 });
-            })
+            });
+            // Carga el footer desde partials/footer.html
+            loadHTML("footer", "partials/footer.html");
         });
         // DOMContentLoaded  end
     </script>
@@ -213,7 +235,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#">Brand</a>
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
@@ -231,7 +253,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <div class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Quiénes Somos</div>
+                        <a class="nav-link  dropdown-toggle" href="quienes-somos.html" data-bs-toggle="dropdown">Quiénes Somos</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Presentación</a></li>
                             <li><a class="dropdown-item" href="#">Nuestro Grupo</a></li>
@@ -245,7 +267,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Hitos 2023</a></li>
                     <li class="nav-item dropdown">
-                        <div class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Somos Sostenibles</div>
+                        <a class="nav-link  dropdown-toggle" href="somos-sostenibles.html" data-bs-toggle="dropdown">Somos Sostenibles</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Grupos de Interés</a></li>
                             <li><a class="dropdown-item" href="#">Contribución a los ODS</a></li>
@@ -253,7 +275,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <div class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Buen Gobierno</div>
+                        <a class="nav-link  dropdown-toggle" href="buen-gobierno.html" data-bs-toggle="dropdown">Buen Gobierno</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Estructura de Gobierno</a></li>
                             <li><a class="dropdown-item" href="#">Código Ético</a></li>
@@ -486,15 +508,6 @@
     <script src="assets/js/main/imagesloaded.pkgd.min.js" defer></script>-->
     <script src="assets/js/main/lazyload.js" defer></script>
     <script src="/assets/js/core/bootstrap-5.3.3/bootstrap.bundle.js" defer></script>
-    <script>
-        (() => {
-            'use strict'
-
-            document.querySelector('#navbarSideCollapse').addEventListener('click', () => {
-                document.querySelector('.offcanvas-collapse').classList.toggle('open')
-            })
-        })()
-    </script>
 </body>
 
 </html>
