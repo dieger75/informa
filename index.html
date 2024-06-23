@@ -143,17 +143,26 @@
         .bg-purple {
             background-color: #6f42c1;
         }
+
         /* ============ desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .has-megamenu {
                 position: static !important;
             }
+
             .navbar .megamenu {
                 left: 0;
                 right: 0;
                 width: 100%;
                 margin-top: 0;
             }
+        }
+
+        .bg-header {
+            background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         /* ============ mobile view .end// ============ */
@@ -236,144 +245,8 @@
 
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#">Brand</a>
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Carta</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#welcome">Presidente</a></li>
-                            <li><a class="dropdown-item" href="#">CEO</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="quienes-somos.html" data-bs-toggle="dropdown">Quiénes Somos</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Presentación</a></li>
-                            <li><a class="dropdown-item" href="#">Nuestro Grupo</a></li>
-                            <li><a class="dropdown-item" href="#">Presencia en España</a></li>
-                            <li><a class="dropdown-item" href="#">Estructura Corporativa</a></li>
-                            <li><a class="dropdown-item" href="#">INFORMA en Cifras</a></li>
-                            <li><a class="dropdown-item" href="#">Desempeño 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Modelo de Gestión Sostenible</a></li>
-                            <li><a class="dropdown-item" href="#">Modelo Transversal</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Hitos 2023</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="somos-sostenibles.html" data-bs-toggle="dropdown">Somos Sostenibles</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Grupos de Interés</a></li>
-                            <li><a class="dropdown-item" href="#">Contribución a los ODS</a></li>
-                            <li><a class="dropdown-item" href="#">Alianzas para Un Fin Común</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="buen-gobierno.html" data-bs-toggle="dropdown">Buen Gobierno</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Estructura de Gobierno</a></li>
-                            <li><a class="dropdown-item" href="#">Código Ético</a></li>
-                            <li><a class="dropdown-item" href="#">Canal de Denuncias</a></li>
-                            <li><a class="dropdown-item" href="#">Funciones de Gobierno</a></li>
-                            <li><a class="dropdown-item" href="#">Sistemas de Control</a></li>
-                            <li><a class="dropdown-item" href="#">Modelo de Prevenciaón de Responsabilidad Penal</a></li>
-                            <li><a class="dropdown-item" href="#">Protección de Datos Pesonales</a></li>
-                            <li><a class="dropdown-item" href="#">Transparencia</a></li>
-                            <li><a class="dropdown-item" href="#">Compromiso con los Derechos Humanos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown has-megamenu">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><span>+ </span>Contenidos</a>
-                        <div class="dropdown-menu megamenu px-md-5" role="menu">
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3">
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Personas</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Introducción</a></li>
-                                            <li><a href="#">Equipo Sólido y Comprometido</a></li>
-                                            <li><a href="#">Igualdad y Diversidad</a></li>
-                                            <li><a href="#">Cociliación</a></li>
-                                            <li><a href="#">Comunicación</a></li>
-                                            <li><a href="#">Desconexión Laboral</a></li>
-                                            <li><a href="#">Tasa de Absentismo</a></li>
-                                            <li><a href="#">Desarrollo Formativo</a></li>
-                                            <li><a href="#">Política de Retribución</a></li>
-                                            <li><a href="#">Seguridad y Salud en el Trabajo</a></li>
-                                            <li><a href="#">Eventos Corporativos</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Clientes</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Base de Datos de Información</a></li>
-                                            <li><a href="#">Calidad de los Datos</a></li>
-                                            <li><a href="#">ESG Intelligence</a></li>
-                                            <li><a href="#">Nuestras Personas</a></li>
-                                            <li><a href="#">Empresa Actual y Redes Sociales</a></li>
-                                            <li><a href="#">Satisfacción del Cliente</a></li>
-                                            <li><a href="#">Sistema de Reclamaciones</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Proveedores</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Proveedores</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Sociedad</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Introducción</a></li>
-                                            <li><a href="#">Premio VIDA de la Fundación CRIS a INFORMA</a></li>
-                                            <li><a href="#">Club de Voluntarios</a></li>
-                                            <li><a href="#">Proyectos Sociales 2023</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Medio Ambiente</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Nuestra visión</a></li>
-                                            <li><a href="#">Políticas y Sistemas de Gestión</a></li>
-                                            <li><a href="#">Residuos</a></li>
-                                            <li><a href="#">Relación con Proveedores</a></li>
-                                            <li><a href="#">Relación con Nuestros Clientes</a></li>
-                                            <li><a href="#">Huella de Carbono</a></li>
-                                            <li><a href="#">Compensación</a></li>
-                                            <li><a href="#">Desempeno Ambiental 2023</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                                <div class="">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Sobre este Informe</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Sobre este Informe</a></li>
-                                        </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                </div>
-                            </div><!-- end row -->
-                        </div> <!-- dropdown-mega-menu.// -->
-                    </li>
-                </ul>
-            </div> <!-- navbar-collapse.// -->
-        </div> <!-- container-fluid.// -->
     </nav>
-    <header class="bg-light header-bg">
+    <header class="bg-light bg-header">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6"></div>
@@ -394,95 +267,29 @@
     <main>
         <section id="" class="py-5">
             <div class="container">
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus,
-                    nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum?
-                    Ex, animi possimus.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus
-                    maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi
-                    illum minima sed non.</p>
-            </div>
-        </section>
-        <section id="" class="py-5">
-            <div class="container">
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia voluptatem magnam maxime natus,
-                    nostrum blanditiis corrupti quod dolores unde sit excepturi quisquam quasi, corporis omnis, in cum?
-                    Ex, animi possimus.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nihil, saepe at eum, ad ducimus
-                    maiores provident doloribus quaerat exercitationem modi distinctio. Culpa, soluta inventore nisi
-                    illum minima sed non.</p>
-            </div>
-        </section>
-        <section id="" class="py-5">
-            <div class="container">
+                <h2 class="text-center">Carta de Bienvenida</h2>
                 <div class="row">
-                    <h2 class="text-center">Carta de Bienvenida</h2>
-                    <div class="col-12 col-md-4">
+                    <div class="col-4">
                         <!-- Imagen con lazy loading -->
                         <img class="lazy" data-src="/assets/images/logos/postitivo.svg" alt="Descripción de la imagen">
                     </div>
-                    <div class="col-12 col-md-8">
-                        <p>Estimados amigos y colaboradores,
-                            Me dirijo a vosotros con motivo de la presentación
-                            de nuestro Informe de Sostenibilidad 2023,
-                            un documento que refleja nuestro sólido
-                            compromiso con el desarrollo sostenible y
-                            nuestra dedicación a la excelencia empresarial.</p>
-                        <p>
-                            En 023 hemos dado pasos significativos en la
-                            integración de los factores ESG (ambientales,
-                            sociales y de gobernanza) en nuestra estrategia
-                            de negocio, reafirmando nuestra adhesión al
-                            Pacto Mundial de las Naciones Unidas y nuestra
-                            contribución activa a los Objetivos de Desarrollo
-                            Sostenible (ODS).
-                        </p>
-                        <p>
-                            Continuamos trabajando sobre la ruta que
-                            trazamos con nuestro Plan Estratégico 2021-
-                            2024, cuyo objetivo principal es la modernización
-                            de nuestra gama de productos y servicios. Nos
-                            hemos convertido en una Smart Data Company,
-                            comprometida con la innovación y gestionando
-                            nuestra base de datos con las últimas tecnologías
-                            de inteligencia artificial y Big Data.
-                            Todo lo anterior se ha visto reflejado en un
-                            record de ventas de 69,7 millones de euros, y el
-                            beneficio después de impuestos ha alcanzado
-                            los 7,2 millones de euros, un avance del 11%,
-                            sumando 28 años consecutivos de ganancias.
-                        </p>
-                        <p>El nivel de satisfacción de nuestros clientes,
-                            indicador clave de nuestro éxito, ha alcanzado
-                            un 95,4 %. Este dato no hubiera sido posible
-                            sin el trabajo y la dedicación de todo nuestro
-                            equipo, a quienes agradezco profundamente su
-                            compromiso y profesionalidad. Hemos apostado
-                            decididamente por su desarrollo profesional
-                            y bienestar laboral, asegurando un entorno
-                            de trabajo que promueve el crecimiento y la
-                            satisfacción personal.
-                            También hemos trabajado con esmero para
-                            mejorar el bienestar de nuestro entorno,
-                            compensando todas nuestras emisiones de
-                            CO2 e invirtiendo 129.978 euros en diversos
-                            proyectos sociales, cuyo impacto detallamos en
-                            este informe.
-                        </p>
-                        <p>
-                            Mirando hacia el futuro, nuestra visión y
-                            compromiso son claros: continuar liderando con
-                            responsabilidad y sostenibilidad y fomentando
-                            una cultura de innovación y excelencia.
-                        </p>
-                        <p>
-                            Agradezco sinceramente vuestra confianza y
-                            apoyo continuo.
-                        </p>
+                    <div class="col-8">
+                        <h3>Fernando Salazar</h3>
+                        <h5>Presidente de INFORMA</h5>
+                        <p>Estimados amigos y colaboradores,</p>
+                        <p>Me dirijo a vosotros con motivo de la presentación de nuestro Informe de Sostenibilidad 2023, un documento que refleja nuestro sólido compromiso con el desarrollo sostenible y nuestra dedicación a la excelencia empresarial.</p>
+                        <p>En 2023 hemos dado pasos significativos en la integración de los factores ESG (ambientales, sociales y de gobernanza) en nuestra estrategia de negocio, reafirmando nuestra adhesión al Pacto Mundial de las Naciones Unidas y nuestra contribución activa a los Objetivos de Desarrollo Sostenible (ODS).</p>
+                        <p>Continuamos trabajando sobre la ruta que trazamos con nuestro Plan Estratégico 2021-2024, cuyo objetivo principal es la modernizaciónde nuestra gama de productos y servicios. Nos hemos convertido en una Smart Data Company, comprometida con la innovación y gestionando nuestra base de datos con las últimas tecnologías de inteligencia artificial y Big Data. Todo lo anterior se ha visto reflejado en un record de ventas de 69,7 millones de euros, y el beneficio después de impuestos ha alcanzado los 7,2 millones de euros, un avance del 11%, sumando 28 años consecutivos de ganancias.</p>
+                        <p>El nivel de satisfacción de nuestros clientes, indicador clave de nuestro éxito, ha alcanzado un 95,4 %. Este dato no hubiera sido posible sin el trabajo y la dedicación de todo nuestro equipo, a quienes agradezco profundamente su compromiso y profesionalidad. Hemos apostado decididamente por su desarrollo profesional y bienestar laboral, asegurando un entorno de trabajo que promueve el crecimiento y la satisfacción personal. También hemos trabajado con esmero para mejorar el bienestar de nuestro entorno, compensando todas nuestras emisiones de CO2 e invirtiendo 129.978 euros en diversos proyectos sociales, cuyo impacto detallamos en este informe.</p>
+                        <p>Mirando hacia el futuro, nuestra visión y compromiso son claros: continuar liderando con responsabilidad y sostenibilidad y fomentando una cultura de innovación y excelencia.</p>
+                        <p>Agradezco sinceramente vuestra confianza y apoyo continuo.</p>
                         <p>Atentamente,</p>
                         <p>Fernando Salazar</p>
                         <p>Presidente de Informa D&B</p>
+
                     </div>
                 </div>
+
             </div>
         </section>
         <section id="" class="lazy-background container d-flex align-items-center"
