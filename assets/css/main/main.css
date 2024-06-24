@@ -1,3 +1,7 @@
+::selection {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
 .lazy-background {
     min-height: 300px;
     background-size: cover;
@@ -6,6 +10,7 @@
 }
 img {
     width: 100%;
+    border-radius: 5px;
 }
 .btn {
     max-width: 350px;
@@ -20,6 +25,9 @@ img {
     height: 1px;
     background-color: #e8e8e8;
     margin: 30px auto 50px;
+}
+#navbar a {
+    font-family: "Noway";
 }
 @media screen and (max-width:576px) {
     .dropdown-item {
