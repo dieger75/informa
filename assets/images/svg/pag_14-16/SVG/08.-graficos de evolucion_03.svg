@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.48 176.63">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #3a61d9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #494e54;
+        font-family: Roboto-Regular, Roboto;
+        font-size: 8px;
+      }
+
+      .cls-5 {
+        fill: #2550d6;
+        font-family: Roboto-Bold, Roboto;
+        font-size: 8.25px;
+        font-weight: 700;
+        opacity: .6;
+      }
+
+      .cls-2 {
+        stroke: #ccd6eb;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: .75px;
+      }
+
+      .cls-3 {
+        stroke: #e6e6e6;
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-5" transform="translate(11.34 33.91)"><tspan x="0" y="0">E</tspan></text>
+    <text class="cls-5" transform="translate(15.99 33.91)"><tspan x="0" y="0">V</tspan></text>
+    <text class="cls-5" transform="translate(21.39 33.91)"><tspan x="0" y="0">O</tspan></text>
+    <text class="cls-5" transform="translate(27.55 33.91)"><tspan x="0" y="0">L</tspan></text>
+    <text class="cls-5" transform="translate(32.2 33.91)"><tspan x="0" y="0">U</tspan></text>
+    <text class="cls-5" transform="translate(37.6 33.91)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-5" transform="translate(43 33.91)"><tspan x="0" y="0">I</tspan></text>
+    <text class="cls-5" transform="translate(45.4 33.91)"><tspan x="0" y="0">Ó</tspan></text>
+    <text class="cls-5" transform="translate(51.56 33.91)"><tspan x="0" y="0">N</tspan></text>
+    <text class="cls-5" transform="translate(57.71 33.91)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-5" transform="translate(60.11 33.91)"><tspan x="0" y="0">D</tspan></text>
+    <text class="cls-5" transform="translate(65.51 33.91)"><tspan x="0" y="0">E</tspan></text>
+    <text class="cls-5" transform="translate(70.16 33.91)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-5" transform="translate(72.57 33.91)"><tspan x="0" y="0">L</tspan></text>
+    <text class="cls-5" transform="translate(77.22 33.91)"><tspan x="0" y="0">O</tspan></text>
+    <text class="cls-5" transform="translate(83.37 33.91)"><tspan x="0" y="0">S</tspan></text>
+    <text class="cls-5" transform="translate(88.77 33.91)"><tspan x="0" y="0"> </tspan></text>
+    <text class="cls-5" transform="translate(91.17 33.91)"><tspan x="0" y="0">E</tspan></text>
+    <text class="cls-5" transform="translate(95.83 33.91)"><tspan x="0" y="0">M</tspan></text>
+    <text class="cls-5" transform="translate(103.48 33.91)"><tspan x="0" y="0">P</tspan></text>
+    <text class="cls-5" transform="translate(108.88 33.91)"><tspan x="0" y="0">L</tspan></text>
+    <text class="cls-5" transform="translate(113.53 33.91)"><tspan x="0" y="0">E</tspan></text>
+    <text class="cls-5" transform="translate(118.19 33.91)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-5" transform="translate(123.59 33.91)"><tspan x="0" y="0">D</tspan></text>
+    <text class="cls-5" transform="translate(128.99 33.91)"><tspan x="0" y="0">O</tspan></text>
+    <text class="cls-5" transform="translate(135.14 33.91)"><tspan x="0" y="0">S</tspan></text>
+  </g>
+  <g>
+    <line class="cls-3" x1="63.59" y1="46.67" x2="63.59" y2="132.2"/>
+    <line class="cls-3" x1="103.36" y1="46.67" x2="103.36" y2="132.2"/>
+    <line class="cls-3" x1="143.13" y1="46.67" x2="143.13" y2="132.2"/>
+    <line class="cls-3" x1="182.89" y1="46.67" x2="182.89" y2="132.2"/>
+    <line class="cls-3" x1="222.66" y1="46.67" x2="222.66" y2="132.2"/>
+    <line class="cls-3" x1="43.71" y1="132.58" x2="242.55" y2="132.58"/>
+    <line class="cls-3" x1="43.71" y1="104.07" x2="242.55" y2="104.07"/>
+    <line class="cls-3" x1="43.71" y1="75.55" x2="242.55" y2="75.55"/>
+    <line class="cls-3" x1="43.71" y1="46.29" x2="242.55" y2="46.29"/>
+    <line class="cls-2" x1="43.71" y1="132.58" x2="242.55" y2="132.58"/>
+  </g>
+  <path class="cls-1" d="m63.59,63.77s23.86,5.7,39.77,5.7,23.86-11.41,39.77-11.41,23.86,25.09,39.77,34.22c15.91,9.12,39.77,11.41,39.77,11.41"/>
+  <g>
+    <text class="cls-4" transform="translate(54.41 146.46)"><tspan x="0" y="0">2019</tspan></text>
+    <text class="cls-4" transform="translate(94.18 146.46)"><tspan x="0" y="0">2020</tspan></text>
+    <text class="cls-4" transform="translate(133.95 146.46)"><tspan x="0" y="0">2021</tspan></text>
+    <text class="cls-4" transform="translate(173.71 146.46)"><tspan x="0" y="0">2022</tspan></text>
+    <text class="cls-4" transform="translate(213.48 146.46)"><tspan x="0" y="0">2023</tspan></text>
+    <text class="cls-4" transform="translate(18.68 135.96)"><tspan x="0" y="0">345</tspan></text>
+    <text class="cls-4" transform="translate(18.68 107.44)"><tspan x="0" y="0">350</tspan></text>
+    <text class="cls-4" transform="translate(18.68 78.93)"><tspan x="0" y="0">355</tspan></text>
+    <text class="cls-4" transform="translate(18.68 50.42)"><tspan x="0" y="0">360</tspan></text>
+  </g>
+</svg>
