@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Verificar si hay un hash en la URL
-    if (window.location.hash) {
-        const targetId = window.location.hash.substring(1); // Obtener el ID del hash
-        const targetElement = document.getElementById(targetId);
+    const elements = document.querySelectorAll('.animate__animated.line-brand');
 
-        if (targetElement) {
-            // Desplazarse suavemente al elemento objetivo
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__fadeInLeft'); // Añade la clase de animación
+                observer.unobserve(entry.target); // Deja de observar una vez que se activa la animación
+            }
+        });
+    });
+
+    elements.forEach(element => {
+        observer.observe(element); // Observa cada elemento con la clase animate__animated
+    });
 });

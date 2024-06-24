@@ -16,6 +16,11 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.divider {
+    height: 1px;
+    background-color: #e8e8e8;
+    margin: 30px auto 50px;
+}
 @media screen and (max-width:576px) {
     .dropdown-item {
         white-space: wrap;

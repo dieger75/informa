@@ -3,10 +3,10 @@
 
 <head>
     <!-- TITLE -->
-    <title>Informe de Sostenibilidad | Informa</title>
+    <title>Carta del CEO | Informa</title>
 
     <!-- META DESCRIPTIONS -->
-    <meta name="description" content="Informe de Sostenibilidad 2023 de Informa, una compañía de Grupo Cesce">
+    <meta name="description" content="Carta del CEO | Informa">
     <meta name="keywords" content="sostenibilidad, informe, Informa, Grupo Cesce">
 
     <!-- CHARSET & VIEWPORT -->
@@ -15,8 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- AUTHOR -->
-    <meta name="author"
-        content="Diego Geraldo - Desarrollo Web y Gestión de Marca | diegogeraldo.com - hola@diegogeraldo.com">
+    <meta name="author" content="Diego Geraldo - Desarrollo Web y Gestión de Marca | diegogeraldo.com - hola@diegogeraldo.com">
 
     <!-- THEME COLOR -->
     <meta name="theme-color" content="#1C4CDE">
@@ -147,6 +146,7 @@
                 margin-top: -1px;
             }
         }
+        
         /* ============ mobile view .end// ============ */
     </style>
 
@@ -183,7 +183,7 @@
     <!-- ******* End Preload and Load CSS No Critical ******* -->
 
     <!-- JQuery Core y Bootstrap -->
-    <script type="text/javascript">
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Función para cargar HTML en un elemento con una función de callback
             function loadHTML(elementId, url, callback) {
@@ -200,11 +200,42 @@
                         if (callback) {
                             callback();
                         }
+                        // Reinicializar comportamientos de ancla
+                        initializeAnchors();
+                        // Desplazar a la ancla si hay un hash en la URL
+                        if (window.location.hash) {
+                            const anchor = document.querySelector(window.location.hash);
+                            if (anchor) {
+                                anchor.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
                     })
                     .catch(error => {
                         console.error('There was a problem with the fetch operation:', error);
                     });
             }
+        
+            // Inicializar comportamientos de ancla
+            function initializeAnchors() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        // Prevenir el comportamiento predeterminado del ancla
+                        e.preventDefault();
+        
+                        // Actualizar el hash en la URL
+                        history.pushState(null, null, this.getAttribute('href'));
+        
+                        // Desplazar suavemente hacia el elemento correspondiente
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+        
             // Carga el header desde partials/header.html y añade el event listener una vez cargado
             loadHTML("navbar", "partials/navbar.html", function () {
                 document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
@@ -220,11 +251,12 @@
                     });
                 });
             });
+        
             // Carga el footer desde partials/footer.html
             loadHTML("footer", "partials/footer.html");
         });
-        // DOMContentLoaded  end
     </script>
+        
 
     <!-- Load JS for IE8 Support -->
     <!-- Incluye polyfills para soportar HTML5 y media queries en navegadores antiguos como IE8. -->
@@ -235,41 +267,38 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top py-3" aria-label="Main navigation">
-    </nav>
-    <header class="bg-light bg-header justify-content-end">
-        <div class="container py-5">
-            <div class="row py-5">
-                <div class="col overflow-hidden">
-                    <h2 class="text-center">Carta de Bienvenida</h2>
-                    <hr class="hr pb-5" />
-                </div>
-            </div>
-        </div>
-    </header>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top py-3" aria-label="Main navigation"></nav>
     <main>
         <section id="" class="py-5">
-            <div class="container py-5">               
-                <div class="row g-5">
+            <div class="container py-5">
+                <h2 class="text-center">Carta de Bienvenida</h2>
+                <div class="divider"></div>          
+                <div class="row g-5" id="aqui">
                     <div class="col-lg-5">
                         <!-- Imagen con lazy loading -->
-                        <img class="lazy" data-src="/assets/images/links-1/Fernando Salazar.jpg" alt="Descripción de la imagen">
+                        <img class="lazy" data-src="/assets/images/no-image-icon.png" alt="Descripción de la imagen">
                         <h3>Juan María Sáinz</h3>
-                        <p class="lead">CEO de INFORMA</p>
+                        <p class="lead">Consejero Delegado de INFORMA</p>
                     </div>
                     <div class="col-lg-7">
-                        <p>Estimados amigos y colaboradores,</p>
-                        <p>Me dirijo a vosotros con motivo de la presentación de nuestro Informe de Sostenibilidad 2023, un documento que refleja nuestro sólido compromiso con el desarrollo sostenible y nuestra dedicación a la excelencia empresarial.</p>
-                        <p>En 2023 hemos dado pasos significativos en la integración de los factores ESG (ambientales, sociales y de gobernanza) en nuestra estrategia de negocio, reafirmando nuestra adhesión al Pacto Mundial de las Naciones Unidas y nuestra contribución activa a los Objetivos de Desarrollo Sostenible (ODS).</p>
-                        <p>Continuamos trabajando sobre la ruta que trazamos con nuestro Plan Estratégico 2021-2024, cuyo objetivo principal es la modernizaciónde nuestra gama de productos y servicios. Nos hemos convertido en una Smart Data Company, comprometida con la innovación y gestionando nuestra base de datos con las últimas tecnologías de inteligencia artificial y Big Data. Todo lo anterior se ha visto reflejado en un record de ventas de 69,7 millones de euros, y el beneficio después de impuestos ha alcanzado los 7,2 millones de euros, un avance del 11%, sumando 28 años consecutivos de ganancias.</p>
-                        <p>El nivel de satisfacción de nuestros clientes, indicador clave de nuestro éxito, ha alcanzado un 95,4 %. Este dato no hubiera sido posible sin el trabajo y la dedicación de todo nuestro equipo, a quienes agradezco profundamente su compromiso y profesionalidad. Hemos apostado decididamente por su desarrollo profesional y bienestar laboral, asegurando un entorno de trabajo que promueve el crecimiento y la satisfacción personal. También hemos trabajado con esmero para mejorar el bienestar de nuestro entorno, compensando todas nuestras emisiones de CO2 e invirtiendo 129.978 euros en diversos proyectos sociales, cuyo impacto detallamos en este informe.</p>
-                        <p>Mirando hacia el futuro, nuestra visión y compromiso son claros: continuar liderando con responsabilidad y sostenibilidad y fomentando una cultura de innovación y excelencia.</p>
-                        <p>Agradezco sinceramente vuestra confianza y apoyo continuo.</p>
-                        <p>Atentamente,</p>
-                        <p>Fernando Salazar</p>
-                        <p>Presidente de Informa D&B</p>
+                        <p>INFORMA continúa siendo, desde hace más de 30 años, el proveedor de referencia de información empresarial en el mercado español, y entendemos que nuestras acciones tienen un impacto directo en la sociedad en la que operamos. Por esta razón, trabajar de manera responsable y sostenible es un pilar esencial de nuestra estrategia y operativa diaria. Como Consejero Delegado, me complace presentar el Informe de Sostenibilidad 2023, que refleja nuestro firme compromiso con estos principios.</p>
+                        <p>Hemos alcanzado una cifra de ventas de 69,7 millones de euros, que supone un incremento del 7% respecto al año anterior, y unos beneficios después de impuestos de 7,2 millones, un avance del 11%, sumando 28 años consecutivos de ganancias.</p>
+                        <p>Este crecimiento es un reflejo de nuestra dedicación y capacidad para ofrecer soluciones de información de alta calidad y valor añadido.</p>
+                        <p>Nuestra base de datos, que alberga información sobre 7,5 millones de agentes económicos, es un recurso esencial para nuestros clientes, y continuamos invirtiendo más de 12 millones de euros anuales en la compra y tratamiento de esta información para mantener su actualización y precisión.</p>
+                        <p>Uno de los avances más significativos de este año ha sido el desarrollo y expansión de nuestra línea de negocio ESG Intelligence. Esta iniciativa ha permitido la recopilación de 98 indicadores de información no financiera y la publicación de los 14 indicadores públicos obligados por la nueva regulación europea. Además, hemos mejorado la taxonomía ESG en noticias de prensa, proporcionando datos cruciales sobre las empresas españolas en materia de ESG.</p>
+                        <p>La satisfacción de nuestros clientes es una prioridad para nosotros y gracias a todo lo anterior, hemos logrado un Net Promoter Score (NPS) del 57,7%, un testimonio de nuestro compromiso con la excelencia en el servicio.</p>
+                        <p>Quiero expresar también mi profundo agradecimiento al equipo de INFORMA por su compromiso y profesionalidad. Este año hemos culminado el proyecto People By Data, adaptando nuestras competencias a una cultura Data Driven y estableciendo el Mapa de Talento de INFORMA, en el que trabajaremos en los próximos años. Además, todos nuestros empleados han recibido formación y hemos promovido su bienestar y salud a través de diversos programas y talleres. Estoy orgulloso de compartir que el 98% de nuestro equipo considera a INFORMA un excelente lugar para trabajar.</p>
+                        <p>En nuestra contribución social, en 2023 hemos invertido 129.978 euros en proyectos sociales, destacando la cofinanciación, por segundo año consecutivo, de la beca de Talento en Investigación Médica de la Fundación Cris, que apoya la labor de la Dra. María Velasco en el estudio de la leucemia mieloide.</p>
+                        <p>A lo largo del Informe que hoy presento, podéis conocer ésta y el resto de las iniciativas sociales en las que hemos colaborado, y quiero agradecer a todos los voluntarios de INFORMA por su dedicación y colaboración activa en las mismas. Sin ellos no serían posible.</p>
+                        <p>En el ámbito ambiental, hemos medido nuestras emisiones en los alcances 1, 2 y 3, y hemos compensado todas ellas a través de un proyecto social, ya que somos una empresa Cero CO2.</p>
+                        <p>No quiero concluir sin expresar mi más sincero agradecimiento por la confianza y fidelidad de nuestros clientes, empleados y nuestros accionistas.</p>
+                        <p>El mundo está cambiando rápidamente, y el entorno nos exige agilidad y flexibilidad. INFORMA es una empresa sólida y estable, con una trayectoria exitosa y un equipo de grandes profesionales, uno de nuestros principales puntos fuertes.</p>
+                        <p>Esta fortaleza nos posiciona de manera ventajosa, y continuaremos apostando por lo que creemos con la misma ilusión que nos ha impulsado durante más de 30 años. Seguiremos alcanzando metas y afrontando nuevos desafíos, con la certeza de que seremos capaces de superarlos.</p>
+                        <p>Un cordial saludo</p>
+                        <p>Juan Ma Sainz</p>
+                        <p>Consejero Delegado de INFORMA</p>
                         <div class="d-flex justify-content-end">
-                            <a href="" type="button" class="btn btn-primary">Carta del CEO</a>
+                            <a href="quienes-somos.html" type="button" class="btn btn-primary">Quienes Somos</a>
                         </div>
                     </div>
                 </div>

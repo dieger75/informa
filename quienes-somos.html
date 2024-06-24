@@ -3,10 +3,10 @@
 
 <head>
     <!-- TITLE -->
-    <title>Informe de Sostenibilidad | Informa</title>
+    <title>Carta del CEO | Informa</title>
 
     <!-- META DESCRIPTIONS -->
-    <meta name="description" content="Informe de Sostenibilidad 2023 de Informa, una compañía de Grupo Cesce">
+    <meta name="description" content="Carta del CEO | Informa">
     <meta name="keywords" content="sostenibilidad, informe, Informa, Grupo Cesce">
 
     <!-- CHARSET & VIEWPORT -->
@@ -75,6 +75,7 @@
         crossorigin="anonymous">
     <link rel="preload" href="/assets/fonts/roboto/roboto-bold.woff2" as="font" type="font/woff"
         crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp" as="image">
     <noscript>
 
     </noscript>
@@ -83,10 +84,11 @@
     <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css">
     </noscript>
 
     <!-- Inline Critical CSS -->
+
     <style type="text/css">
         html,
         body {
@@ -96,12 +98,13 @@
 
         body {
             display: none;
+            padding-top: 77px;
         }
 
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
                 position: fixed;
-                top: 56px;
+                top: 77px;
                 /* Height of navbar */
                 bottom: 0;
                 left: 100%;
@@ -110,7 +113,7 @@
                 padding-left: 1rem;
                 overflow-y: auto;
                 visibility: hidden;
-                background-color: #343a40;
+                background-color: #fff;
                 transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             }
 
@@ -140,10 +143,6 @@
             color: #343a40;
         }
 
-        .bg-purple {
-            background-color: #6f42c1;
-        }
-
         /* ============ desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .has-megamenu {
@@ -154,21 +153,8 @@
                 left: 0;
                 right: 0;
                 width: 100%;
-                margin-top: 0;
+                margin-top: -1px;
             }
-        }
-
-        .bg-header {
-            /* background-image: url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp); */
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 80vh;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: grey;
         }
 
         /* ============ mobile view .end// ============ */
@@ -207,7 +193,7 @@
     <!-- ******* End Preload and Load CSS No Critical ******* -->
 
     <!-- JQuery Core y Bootstrap -->
-    <script type="text/javascript">
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Función para cargar HTML en un elemento con una función de callback
             function loadHTML(elementId, url, callback) {
@@ -224,22 +210,63 @@
                         if (callback) {
                             callback();
                         }
+                        // Reinicializar comportamientos de ancla
+                        initializeAnchors();
+                        // Desplazar a la ancla si hay un hash en la URL
+                        if (window.location.hash) {
+                            const anchor = document.querySelector(window.location.hash);
+                            if (anchor) {
+                                anchor.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
                     })
                     .catch(error => {
                         console.error('There was a problem with the fetch operation:', error);
                     });
             }
+
+            // Inicializar comportamientos de ancla
+            function initializeAnchors() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        // Prevenir el comportamiento predeterminado del ancla
+                        e.preventDefault();
+
+                        // Actualizar el hash en la URL
+                        history.pushState(null, null, this.getAttribute('href'));
+
+                        // Desplazar suavemente hacia el elemento correspondiente
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
             // Carga el header desde partials/header.html y añade el event listener una vez cargado
             loadHTML("navbar", "partials/navbar.html", function () {
                 document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
                     document.querySelector('.offcanvas-collapse').classList.toggle('open');
                 });
+                // Añadir event listeners a los enlaces del menú
+                document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function (element) {
+                    element.addEventListener('click', function (event) {
+                        // Solo cerrar el menú si el enlace no es parte de un dropdown
+                        if (!event.target.closest('.dropdown-toggle')) {
+                            document.querySelector('.offcanvas-collapse').classList.remove('open');
+                        }
+                    });
+                });
             });
+
             // Carga el footer desde partials/footer.html
             loadHTML("footer", "partials/footer.html");
         });
-        // DOMContentLoaded  end
     </script>
+
 
     <!-- Load JS for IE8 Support -->
     <!-- Incluye polyfills para soportar HTML5 y media queries en navegadores antiguos como IE8. -->
@@ -250,53 +277,14 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
-    </nav>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top py-3" aria-label="Main navigation"></nav>
     <main>
-        <section id="" class="py-5">
-            <div class="container py-5">
-                <h2 class="text-center">Carta de Bienvenida</h2>
-                <hr class="hr pb-5" />
-                <div class="row g-5">
-                    <div class="col-lg-5">
-                        <!-- Imagen con lazy loading -->
-                        <img class="lazy" data-src="/assets/images/links-1/Fernando Salazar.jpg" alt="Descripción de la imagen">
-                        <h3>Fernando Salazar</h3>
-                        <h4>Presidente de INFORMA</h4>
-                        <h5>Presidente de INFORMA</h5>
-                        <h6>Presidente de INFORMA</h6>
-                    </div>
-                    <div class="col-lg-7">
-                        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime aperiam consequatur, tempore tempora vel cupiditate molestias quia id eum numquam quisquam, minus recusandae error quam deleniti blanditiis amet culpa.</span><span>Dignissimos, quis. Sint tempore at eligendi ipsa voluptatum, vel dolores pariatur ipsum nobis maiores, voluptatem saepe deserunt modi quae et. Esse soluta libero necessitatibus sed voluptate, sequi nisi fugiat eius.</span><span>Totam quidem, autem culpa, minus quaerat a ab soluta assumenda inventore repellendus corrupti quisquam eum minima laboriosam. Optio ipsam maiores facere enim similique ipsa! Voluptas ex dolores consequatur voluptate repudiandae?</span><span>Voluptates alias inventore, in explicabo maxime incidunt similique sequi, aliquam voluptatem repellat reprehenderit officia odio, nisi enim quo dolorum unde ad blanditiis doloribus delectus iste eligendi sapiente. At, voluptas nobis.</span><span>Tempora modi ut earum iusto itaque minus ab, eum eveniet recusandae corrupti aliquid fugiat incidunt numquam commodi illum veritatis quibusdam culpa vitae laudantium. Enim id dignissimos dolore fugiat molestiae ut?</span><span>Animi temporibus, rem rerum unde repellendus dolorum enim quis alias. Exercitationem accusantium eligendi iusto veritatis earum iste itaque fugit suscipit, ipsa ea assumenda? Quibusdam explicabo vel, delectus dolores ipsam qui.</span><span>Minus beatae, vero possimus laboriosam eum molestias ducimus, esse magnam reprehenderit, ipsa vitae dolore sunt? Velit quod commodi, reiciendis, fugit officiis reprehenderit, excepturi voluptate accusantium repellendus quae facere mollitia sequi.</span><span>Harum temporibus ipsa est sunt, maxime voluptate! Corrupti, laborum quaerat iure sequi obcaecati, illo excepturi aliquam fugiat aut, ab provident iusto! Doloremque illum dignissimos dicta? Repudiandae quas vitae corporis a!</span><span>Accusamus illo numquam magni at nulla, distinctio facilis omnis deleniti velit sed iste placeat animi dolores, repellendus, laudantium eius labore vitae tempora! Facere explicabo non nostrum neque obcaecati vitae provident.</span><span>Tempore voluptatibus blanditiis sed eius, obcaecati, doloremque in velit nihil quidem voluptas autem animi nesciunt deserunt eaque, corporis quos expedita ex perferendis quae unde aut numquam quaerat. Architecto, explicabo possimus?</span></p>
-                        <a href="" type="button" class="btn btn-primary btn-MD px-4 me-md-2">Carta del CEO</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="divider"></div>    
-        <section id="" class="lazy-background d-flex align-items-center py-5"
-            data-bg="/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp">
+        <section id="quienes-somos" class="pt-5">
             <div class="container py-5">
                 <div class="row">
-                    <h1>Títulos H1</h1>
-                    <h2>Títulos H2</h2>
-                    <h3>Títulos H3</h3>
-                    <h4>Títulos H4</h4>
-                    <h5>Títulos H5</h5>
-                    <h6>Títulos H6</h6>
-                    <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti tenetur nihil deserunt aliquid
-                        velit expedita asperiores vitae numquam natus atque iure nulla libero, porro amet qui excepturi
-                        fugiat fuga rem.</p>
-                </div>
-            </div>
-        </section>
-        <div class="divider"></div>    
-        <header class="bg-primary justify-content-end pt-5">
-            <div class="container pt-5">
-                <div class="row py-5">
-                    <div class="overflow-hidden text-white">
-                        <div class="py-5 ps-5 animate__animated animate__fadeInLeft line-brand">
-                            <h1 class="mb-3">¿Quienes Somos?</h1>
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">¿Quienes Somos?</h2>
                         </div>
                         <p class="lead animate__animated animate__fadeIn animate__delay-1s">Informa D&B S.A.U. (S.M.E.) es una Sociedad Anónima Unipersonal. Sociedad
                             Mercantil Estatal de las previstas en el artículo 111.1 a) de la Ley 40/2015, de 1 de octubre, de
@@ -304,7 +292,74 @@
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <p>Estamos íntegramente participados por otra sociedad
+                            mercantil estatal, la Compañía Española de Seguros de Crédito
+                            a la Exportación, CESCE.</p>
+                        <p>Nuestro objeto social es la creación, organización, puesta en
+                            marcha y comercialización, por cuenta propia o por cuenta de
+                            terceros, de bases de datos, especialmente las relacionadas
+                            con información comercial económica y financiera.
+                            En la actualidad, somos líderes en el suministro de Información
+                            Comercial, Financiera, Sectorial y de Marketing de empresas y
+                            empresarios.</p>
+                        <p>Nacimos en 1992, y hemos centrado nuestra estrategia en el
+                            tratamiento exhaustivo de todas las fuentes de información
+                            disponible, así como en la innovación y mejora continua. Ya en
+                            1996 fuimos la primera empresa en Europa y la segunda del
+                            mundo en comercializar Información Comercial a través de
+                            Internet.</p>
+                        <p>Desde 2000 somos la empresa líder en la venta de información
+                            de empresas para empresas, ayudando a nuestros clientes
+                            en la toma de sus decisiones comerciales, en la búsqueda de
+                            nuevos clientes y en la gestión de sus carteras para evitar
+                            riesgos y aprovechar oportunidades de negocio.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>En 2006 llevamos a cabo la fusión por absorción de Dun &
+                            Bradstreet Servicios de Información, constituyendo Informa
+                            D&B y poniendo punto final al proceso que se inició en el año
+                            2004, cuando adquirimos el negocio de Dun & Bradstret en
+                            España y Portugal.</p>
+                        <p>Como resultado de este acuerdo, pasamos a formar parte de
+                            la red global de información de empresas más extensa del
+                            mundo, la Dun & Bradstreet Worldwide Network, y actualmente
+                            ofrecemos acceso online a la información de más de 550
+                            millones de empresas.</p>
+                        <p>Nuestra base de datos de información comercial y financiera
+                            fue la primera en conseguir el certificado de calidad según
+                            la norma ISO 9002. INFORMA también ha sido la primera
+                            empresa de su sector en lograr el certificado de seguridad de
+                            la información según la ISO 27001.</p>
+                        <p>En el ejercicio 2023, contamos con una plantilla de 354 personas
+                            para dar servicio a nuestros más de 4,46 millones de usuarios
+                            entre nuestras marcas, INFORMA, eInforma y DBK, y nuestras
+                            webs registran 30 millones de páginas vistas al mes. Más del
+                            95% de las entidades financieras y el 89% de las empresas del
+                            Ibex 35 confían en nosotros para tomar sus decisiones de riesgo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="divider"></div>    
+        </section>
+        <section id="nuestro-grupo" class="py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Nuestro Grupo</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+
+            </div>
+        </section>
     </main>
 
     <footer id="footer" class="bg-primary py-5"></footer>
@@ -318,8 +373,10 @@
     <script src="assets/js/main/ion.rangeSlider.min.js" defer></script>
     <script src="assets/js/main/jquery.backgroundvideo.js" defer></script>
     <script src="assets/js/main/imagesloaded.pkgd.min.js" defer></script>-->
-    <script src="assets/js/main/lazyload.js" defer></script>
+
     <script src="/assets/js/core/bootstrap-5.3.3/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/main/lazyload.js" defer></script>
+    <script src="assets/js/main/main.js"></script>
 </body>
 
 </html>
