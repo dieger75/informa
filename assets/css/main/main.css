@@ -29,6 +29,16 @@ img {
 #navbar a {
     font-family: "Noway";
 }
+.bg-r-tertiary {
+    background-image: linear-gradient(180deg, #fff 50%, var(--bs-tertiary) 50%);
+}.bg-l-tertiary {
+    background-image: linear-gradient(0deg, #fff 50%, var(--bs-tertiary) 50%);
+}
+@media screen and (min-width: 992px) {
+    .bg-r-tertiary {
+        background-image: linear-gradient(90deg, #fff 50%, var(--bs-tertiary) 50%);
+    }
+}
 @media screen and (max-width:576px) {
     .dropdown-item {
         white-space: wrap;
