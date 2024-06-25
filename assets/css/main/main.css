@@ -2,7 +2,16 @@
     background-color: var(--bs-primary);
     color: #fff;
 }
-
+.section {
+    padding-top: 16vw;
+    padding-bottom: 10vw;
+}
+@media screen and (min-width: 992px) {
+    .section {
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+    }
+}
 /************************
  * BARRA DE NAVEGACION 
  *********************** */
@@ -10,7 +19,7 @@
     font-family: "Noway";
 }
 #navbar::after,
-#navbar-black::after{
+#navbar.navbar-reverse::after{
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -24,8 +33,8 @@
 	-webkit-overflow-scrolling: touch;
 }
 /** cambia el background de la barra de navegación */
-#navbar::after { background-color: #fff; }
-#navbar-black::after { background-color: var(--bs-tertiary); }
+#navbar.navbar-reverse::after { background-color: #fff; }
+#navbar::after { background-color: var(--bs-primary); }
 .navbar--charcoal::after {
     transform: none !important;
 }
@@ -40,8 +49,8 @@
 /** fin cambia el background de la barra de navegación */
 
 /** efecto de linea inferior de la barra de navegación */
-#navbar::before,
-#navbar.navbar-reverse::before {
+#navbar .container::before,
+#navbar.navbar-reverse .container::before {
 	content: "";
 	width: 90%;
 	height: 1px;
@@ -52,47 +61,87 @@
 	animation: stretchLine 1.4s ease-in-out;
 	-webkit-overflow-scrolling: touch;
 }
-#navbar::before { background-color: rgba(255,255,255,0.3); }
-#navbar.navbar-reverse::before { background-color: rgba(0,0,0,0.1); }
-#navbar.navbar--charcoal::before {
+#navbar.navbar-reverse .container::before { background-color: rgba(255,255,255,0.3); }
+#navbar .container::before { background-color: rgba(0,0,0,0.1); }
+#navbar.navbar-reverse.navbar--charcoal .container::before {
 	background: rgba(0,0,0,0.1);
 }
-#navbar-black.navbar--charcoal::before {
+/* #navbar.navbar--charcoal::before {
 	background: rgba(255,255,255,0.3);
-}
+} */
 /** fin de efecto de linea inferior de la barra de navegación */
 
-
-#navbar .nav-item > a {
-    color: #fff;
-}
-#navbar.navbar-reverse .nav-item > a {
+/** color del logo según el fondo de header*/
+#navbar .nav-item > a,
+#navbar.navbar-reverse.navbar--charcoal .nav-item  > a {
     color: var(--bs-body-color);
 }
-#navbar.navbar-reverse svg .cls-1 {
+#navbar.navbar-reverse .nav-item > a,
+#navbar.navbar--charcoal .nav-item > a {
+    color: #fff;
+}
+#navbar svg .cls-1,
+#navbar.navbar-reverse.navbar--charcoal svg .cls-1 {
 	fill: var(--bs-primary);
 }
-/** efecto activado por la clase charcol */
-#navbar.navbar--charcoal a {
-	color: var(--bs-body-color);
-}
+#navbar.navbar-reverse svg .cls-1,
 #navbar.navbar--charcoal svg .cls-1 {
-	fill: var(--bs-primary);
+	fill: #fff;
 }
-
-#navbar.navbar--charcoal .dropdown-toggle::after {
-    background-color: var(--bs-body-color);
-    width: 12px;
-    height: 12px;
-}
-#navbar.navbar-reverse  .dropdown-toggle::after {
-    background-color: var(--bs-body-color); /* Color deseado */
+#navbar .dropdown-toggle::after {
     mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
     -webkit-mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
     width: 12px;
     height: 12px;
 }
+#navbar .dropdown-toggle::after,
+#navbar.navbar-reverse.navbar--charcoal .dropdown-toggle::after {
+    background-color: var(--bs-body-color); /* Color deseado */
+}
+#navbar.navbar-reverse .dropdown-toggle::after,
+#navbar.navbar--charcoal .dropdown-toggle::after {
+    background-color: #fff; /* Color deseado */
+}
+
+#navbar.navbar--charcoal .dropdown-toggle::after {
+    width: 12px;
+    height: 12px;
+}
+/* Megamenu */
+.dropdown-menu .title {
+    font-family: 'Noway';
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: var(--bs-primary-reverse) 1px solid;
+}
+.dropdown-menu  {
+    border: none;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.dropdown-menu a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.dropdown-item:hover {
+    background-color: #E5E8EB;
+}
+.dropdown-menu.megamenu .list-unstyled a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dropdown-menu.megamenu .list-unstyled a:hover {
+    background-color: #E5E8EB;
+    color: var(--bs-primary)
+}
 /* END HEADER */
+
 .lazy-background {
     min-height: 300px;
     background-size: cover;
@@ -101,7 +150,6 @@
 }
 img {
     width: 100%;
-    border-radius: 5px;
 }
 .btn {
     max-width: 350px;

@@ -90,14 +90,8 @@
     <!-- Inline Critical CSS -->
 
     <style type="text/css">
-        /*html,
-        body {
-            overflow-x: hidden;
-            /* Prevent scroll on narrow devices *
-        }*/
         body {
             display: none;
-            /* padding-top: 77px; */
         }
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
@@ -111,7 +105,7 @@
                 padding-left: 1rem;
                 overflow-y: auto;
                 visibility: hidden;
-                background-color: #fff;
+                background-color: #011e3d;
                 transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             }
             .offcanvas-collapse.open {
@@ -119,14 +113,7 @@
                 transform: translateX(-100%);
             }
         }
-        .dropdown-toggle::after {
-            background-color: #fff; /* Color deseado */
-            mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
-            -webkit-mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
-            width: 12px;
-            height: 12px;
-        }
-        .nav-scroller .nav {
+        /* .nav-scroller .nav {
             color: rgba(255, 255, 255, .75);
         }
         .nav-scroller .nav-link {
@@ -141,7 +128,7 @@
         .nav-scroller .active {
             font-weight: 500;
             color: #343a40;
-        }
+        } */
         /* ============ desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .has-megamenu {
@@ -154,6 +141,7 @@
                 margin-top: -1px;
             }
         }
+        /* Imagen de cabecera de HOME */
         .bg-header {
             background-image: linear-gradient(180deg, rgba(1, 30, 61, 0.7) 5%, transparent 40%), url(/assets/images/links-1/3d-illustration-white-geometric-hexagonal-abstrac.webp); 
             background-position: center;
@@ -166,7 +154,6 @@
             justify-content: center;
             position: sticky;
             top: 0;
-            z-index: -1;
         }
         .line-brand {
             background-image: url(/assets/images/svg/line-brand.svg);
@@ -294,7 +281,7 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top p-0" aria-label="Main navigation">
+    <nav id="navbar" class="navbar navbar-reverse navbar-expand-lg fixed-top p-0" aria-label="Main navigation">
     </nav>
     <header class="bg-light bg-header justify-content-end">
         <div class="container py-5">
@@ -312,8 +299,8 @@
             </div>
         </div>
     </header>
-    <main class="bg-white">
-        <section id="welcome" class="py-5">
+    <main class="bg-white position-relative" style="z-index: 1;">
+        <section id="welcome" class="section">
             <div class="container py-5">
                 <h2 class="text-center text-primary">Carta de Bienvenida</h2>
                 <div class="divider"></div>
@@ -349,7 +336,7 @@
         </section>
     </main>
 
-    <footer id="footer" class="bg-primary py-5"></footer>
+    <footer id="footer" class="bg-primary py-5 position-relative" style="z-index: 1;"></footer>
     <!-- Scripts principales al final del body -->
     <!-- <script src="assets/js/main/jquery.appear.js" defer></script>
     <script src="assets/js/main/isotope.pkgd.min.js" defer></script>
