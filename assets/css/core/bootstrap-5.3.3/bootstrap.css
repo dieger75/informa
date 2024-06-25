@@ -31,6 +31,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #1C4CDE; /*cambiado*/
+  --bs-primary-reverse: #5072DD;
   --bs-secondary: #FD1A30; /*cambiado*/
   --bs-tertiary: #011E3D; /*cambiado*/
   --bs-success: #198754;
@@ -41,6 +42,7 @@
   --bs-dark: #212529;
 
   --bs-primary-rgb: 28, 76, 222; /*cambiado*/
+  --bs-primary-reverse-rgb: 80, 114, 221; /*cambiado*/
   --bs-secondary-rgb: 253, 26, 49; /*cambiado*/
   --bs-tertiary-rgb: 1, 30, 61; /*cambiado*/
   --bs-success-rgb: 25, 135, 84;
@@ -95,7 +97,7 @@
   --bs-tertiary-color: rgba(33, 37, 41, 0.5);
   --bs-tertiary-color-rgb: 33, 37, 41;
   --bs-tertiary-bg: #f8f9fa;
-  --bs-tertiary-bg-rgb: 248, 249, 250;
+  --bs-tertiary-bg-rgb: 1, 30, 61; /*cambiado*/
   --bs-heading-color: inherit;
   --bs-link-color: var(--bs-primary);
   --bs-link-color-rgb: 13, 110, 253;
@@ -3417,11 +3419,10 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 .dropdown-toggle::after {
-  content: url(/assets/icons/angle-down-solid.svg);
+  content: "";
   display: inline-block;
   margin-left: 0.3em;
   vertical-align: middle;
-  width: 12px;
 }
 .dropdown-toggle:empty::after {
   margin-left: 0;
@@ -8505,6 +8506,10 @@ textarea.form-control-lg {
 .text-primary {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+.text-primary-reverse {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-reverse-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-secondary {
