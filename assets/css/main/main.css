@@ -3,13 +3,13 @@
     color: #fff;
 }
 .section {
-    padding-top: 16vw;
+    padding-top: 10vw;
     padding-bottom: 10vw;
 }
 @media screen and (min-width: 992px) {
     .section {
-        padding-top: 6vw;
-        padding-bottom: 6vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
     }
 }
 /************************
@@ -71,10 +71,15 @@
 } */
 /** fin de efecto de linea inferior de la barra de navegación */
 
-/** color del logo según el fondo de header*/
 #navbar .nav-item > a,
 #navbar.navbar-reverse.navbar--charcoal .nav-item  > a {
-    color: var(--bs-body-color);
+    color: #fff;
+}
+@media screen and (min-width: 992px) {
+    #navbar .nav-item > a,
+    #navbar.navbar-reverse.navbar--charcoal .nav-item  > a {
+        color: var(--bs-body-color);
+    }
 }
 #navbar.navbar-reverse .nav-item > a,
 #navbar.navbar--charcoal .nav-item > a {
@@ -88,6 +93,7 @@
 #navbar.navbar--charcoal svg .cls-1 {
 	fill: #fff;
 }
+/* color de icono de menu */
 #navbar .dropdown-toggle::after {
     mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
     -webkit-mask: url(/assets/icons/angle-down-solid.svg) no-repeat center;
@@ -96,17 +102,23 @@
 }
 #navbar .dropdown-toggle::after,
 #navbar.navbar-reverse.navbar--charcoal .dropdown-toggle::after {
-    background-color: var(--bs-body-color); /* Color deseado */
+    background-color: #fff; /* Color deseado */
 }
 #navbar.navbar-reverse .dropdown-toggle::after,
 #navbar.navbar--charcoal .dropdown-toggle::after {
     background-color: #fff; /* Color deseado */
 }
-
-#navbar.navbar--charcoal .dropdown-toggle::after {
+@media screen and (min-width: 992px) {
+    #navbar .dropdown-toggle::after,
+    #navbar.navbar-reverse.navbar--charcoal .dropdown-toggle::after {
+        background-color: var(--bs-body-color); /* Color deseado */
+    }
+}
+/* #navbar.navbar--charcoal .dropdown-toggle::after {
     width: 12px;
     height: 12px;
-}
+} */
+
 /* Megamenu */
 .dropdown-menu .title {
     font-family: 'Noway';
@@ -184,4 +196,9 @@ img {
     .dropdown-item {
         white-space: wrap;
     }
+}
+
+/* imagenes SVG */
+.svg-primary svg use path.cls-1 {
+    fill: var(--bs-primary) !important;
 }

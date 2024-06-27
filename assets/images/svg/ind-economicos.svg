@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.57 23.91">
+<svg id="ind_economicos" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.57 23.91">
   <defs>
     <style>
-      .cls-1 {
+      #ind_economicos .cls-1 {
         stroke-width: 0px;
+        fill: #fff;
       }
     </style>
   </defs>

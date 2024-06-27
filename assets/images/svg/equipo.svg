@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.01 30.03">
+<svg id="equipo" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.01 30.03">
   <defs>
     <style>
-      .cls-1 {
+      #equipo .cls-1 {
         stroke-width: 0px;
+        fill: #5072DD;
       }
     </style>
   </defs>
