@@ -5,6 +5,7 @@
 .section {
     padding-top: 10vw;
     padding-bottom: 10vw;
+    scroll-margin-top: 75px;
 }
 @media screen and (min-width: 992px) {
     .section {
