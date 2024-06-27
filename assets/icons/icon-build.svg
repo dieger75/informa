@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.51 29.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3a61d9;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <path class="cls-1" d="M18.82,10.92v16.57h-5.12v-12.32H0v14.6h13.7v-.05h5.12v.05h13.7V10.92h-13.7ZM11.46,27.55H2.23v-10.14h9.23v10.14ZM30.28,27.55h-9.23v-14.39h9.23v14.39Z"/>
+      <rect class="cls-1" x="23.75" y="15.14" width="3.82" height="2.23"/>
+      <rect class="cls-1" x="23.75" y="19.24" width="3.82" height="2.23"/>
+      <rect class="cls-1" x="23.75" y="23.33" width="3.82" height="2.23"/>
+      <rect class="cls-1" x="5.08" y="19.24" width="3.82" height="2.23"/>
+      <rect class="cls-1" x="5.08" y="23.33" width="3.82" height="2.23"/>
+      <polygon class="cls-1" points="9.15 2.23 23.29 2.23 23.29 9.24 25.52 9.24 25.52 0 6.92 0 6.92 13.2 9.15 13.2 9.15 2.23"/>
+      <rect class="cls-1" x="13.63" y="5.54" width="5.19" height="2.23"/>
+    </g>
+  </g>
+</svg>
