@@ -186,7 +186,8 @@ img {
 }
 .bg-gray-10 {
     --bs-bg-opacity: 0.1;
-    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+    /* background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)); */
+    background-color: #E9EDFA;
 }
 @media screen and (min-width: 992px) {
     .bg-r-tertiary {
@@ -205,11 +206,10 @@ img {
 }
 
 /* QUIENES SOMOS */
-#quienes-somos p {
+.p-graphic p {
     font-size: 14px;
 }
-#quienes-somos .flex-column > p.text-primary-reverse:first-of-type {
+.p-graphic .flex-column > p.text-primary-reverse:first-of-type {
     font-weight: 500;
     font-family: 'Noway';
-    font-size: 1rem;
 }
