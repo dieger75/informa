@@ -65,6 +65,9 @@
         <link rel="stylesheet" href="/assets/fonts/roboto/roboto-medium.woff2">
     </noscript>
 
+    <!-- Preload critical image -->
+    <link rel="preload" href="/assets/images/Juan-Sainz.webp" as="image">
+
     <!-- Preload critical CSS -->
     <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
@@ -148,14 +151,14 @@
 <body class="">
     <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top p-0" aria-label="Main navigation"></nav>
     <main class="overflow-hidden">
-        <section id="" class="section">
+        <section id="" class="py-3 py-lg-5">
             <div class="container py-5">
                 <h2 class="text-center text-primary">Carta de Bienvenida</h2>
                 <div class="divider"></div>          
                 <div class="row">
                     <div class="col-lg-7 p-3 p-sm-5 px-lg-3 bg-r-tertiary">
                         <!-- Imagen con lazy loading -->
-                        <img class="" src="/assets/images/links-1/Juan-Sainz.jpg" alt="Fernando Salazar - Presidente de INFORMA">
+                        <img class="" src="/assets/images/Juan-Sainz.webp" alt="Fernando Salazar - Presidente de INFORMA">
                     </div>
                     <div class="col-lg-5 d-flex flex-column justify-content-center p-5 bg-tertiary text-white">
                         <h3>Juan María Sáinz</h3>

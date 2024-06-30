@@ -2,11 +2,14 @@
     background-color: var(--bs-primary);
     color: #fff;
 }
+section {
+    scroll-margin-top: 75px;
+}
 .section {
     padding-top: 10vw;
     padding-bottom: 10vw;
-    scroll-margin-top: 75px;
 }
+
 @media screen and (min-width: 992px) {
     .section {
         padding-top: 4vw;
@@ -162,7 +165,7 @@
     background-repeat: no-repeat;
 }
 img {
-    width: 100%;
+    max-width: 100%;
 }
 .btn {
     max-width: 350px;
@@ -201,8 +204,15 @@ img {
 }
 
 /* imagenes SVG */
-.svg-primary svg use path.cls-1 {
+.fill-primary .cls-1,
+.fill-primary .cls-2,
+.fill-primary .cls-3 {
     fill: var(--bs-primary) !important;
+}
+.fill-white .cls-1,
+.fill-white .cls-2,
+.fill-white .cls-3 {
+    fill: #fff !important;
 }
 
 /* QUIENES SOMOS */
@@ -214,6 +224,33 @@ img {
     font-family: 'Noway';
 }
 /* GRAFICO PIRAMIDE */
+.line-1, .line-2 {
+    height: 30px;
+    border-style: solid;
+    border-color: #f0f4f9;
+}
+.line-1 {
+    border-width: 0 3px 3px 3px;
+    border-radius: 0 0 5px 5px;
+}
+.line-2 {
+    border-width: 0 0 3px 0;
+}
+.box {
+    height: 60px;
+    width: 45px;
+    background-color: #1dc5f9;
+}
+.number-top-pyramid {
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    .number-top-pyramid {
+        position: absolute;
+        top: 16px;
+        left: -45px;
+    }
+}
 .funnel-item-1, .funnel-item-3, .funnel-item-5, .funnel-item-7, .funnel-item-9, .funnel-item-11 {
     padding-left: 3%;
 }
@@ -316,7 +353,7 @@ img {
 }
 
 /* custom bullet list informa */
-.list-check {
+.list-check, .list-equis, .list-point {
     list-style: none;
     padding-left: 0;
     position: relative;
@@ -347,11 +384,7 @@ img {
     top: 14px;
     transform: translateY(-50%);
 }
-.list-equis {
-    list-style: none;
-    padding-left: 0;
-    position: relative;
-}
+
 .list-equis::before {
     content: "";
     width: 1px;
@@ -377,4 +410,20 @@ img {
     left: 0;
     top: 14px;
     transform: translateY(-50%);
+}
+.list-point li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.list-point li::before {
+    content: '';
+    background: var(--bs-secondary);
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    border-radius: 100%;
+    /* transform: translateY(-50%); */
 }
