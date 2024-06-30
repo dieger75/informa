@@ -309,3 +309,67 @@ img {
 .funnel-item-12 {
     background-color: #f9faf2;
 }
+
+/* custom bullet list informa */
+.list-check {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+.list-check::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #9dc34b;
+    position: absolute;
+    top: 0;
+    left: 14px;
+}
+.list-check li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+.list-check li::before {
+    content: '';
+    background: url('/assets/icons/icno-chek.svg') no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    transform: translateY(-50%);
+}
+.list-equis {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+.list-equis::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #ff0000;
+    position: absolute;
+    top: 0;
+    left: 14px;
+}
+.list-equis li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+.list-equis li::before {
+    content: '';
+    background: url('/assets/icons/icon-equis.svg') no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    transform: translateY(-50%);
+}
