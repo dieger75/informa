@@ -213,3 +213,99 @@ img {
     font-weight: 500;
     font-family: 'Noway';
 }
+/* GRAFICO PIRAMIDE */
+@media screen and (min-width:768px){
+    .funnel-item-data {
+        max-width: 350px;
+    }
+    .funnel-item-1, .funnel-item-3, .funnel-item-5, .funnel-item-7, .funnel-item-9, .funnel-item-11 {
+        position: relative;
+        z-index: 1;
+    }
+    .funnel-item-2, .funnel-item-4, .funnel-item-6, .funnel-item-8, .funnel-item-10, .funnel-item-12 {
+        position: relative;
+        right: 16px;
+        justify-content: center !important;
+    }
+    .funnel-item-1 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 2%;
+    }
+    .funnel-item-2 {
+        clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
+    }
+    .funnel-item-3 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 5%;
+    }
+    .funnel-item-4 {
+        clip-path: polygon(0 0, 96.5% 0, 93.5% 100%, 3% 100%);
+    }
+    .funnel-item-5 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 8%;
+    }
+    .funnel-item-6 {
+        clip-path: polygon(0 0, 93% 0, 90% 100%, 3% 100%);
+    }
+    .funnel-item-7 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 11%;
+    }
+    .funnel-item-8 {
+        clip-path: polygon(0 0, 89.5% 0, 86.5% 100%, 3% 100%);
+    }
+    .funnel-item-9 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 14%;
+    }
+    .funnel-item-10 {
+        clip-path: polygon(0 0, 86% 0, 83% 100%, 3% 100%);
+    }
+    .funnel-item-11 {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+        left: 17%;
+    }
+    .funnel-item-12 {
+        clip-path: polygon(0 0, 82.5% 0, 79.5% 100%, 3% 100%);
+    }
+}
+.funnel-item-1, .funnel-item-3, .funnel-item-5, .funnel-item-7, .funnel-item-9, .funnel-item-11 {
+    padding-left: 3%;
+}
+.funnel-item-1 {
+    background-color: #2294fc;
+}
+.funnel-item-2 {
+    background-color: #e9f0f6;
+}
+.funnel-item-3 {
+    background-color: #30befd;
+}
+.funnel-item-4 {
+    background-color: #f0f5fb;
+}
+.funnel-item-5 {
+    background-color: #35ccfd;
+}
+.funnel-item-6 {
+    background-color: #f3f8fc;
+}
+.funnel-item-7 {
+    background-color: #55d1a8;
+}
+.funnel-item-8 {
+    background-color: #f2f8f8;
+}
+.funnel-item-9 {
+    background-color: #55d1a8;
+}
+.funnel-item-10 {
+    background-color: #f8f9f3;
+}
+.funnel-item-11 {
+    background-color: #36c66c;
+}
+.funnel-item-12 {
+    background-color: #f9faf2;
+}

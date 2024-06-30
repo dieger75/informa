@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Funnel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* styles.css */
+.financial-funnel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.funnel-item {
+    padding: 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    margin-bottom: 10px;
+}
+
+.funnel-item .row {
+    align-items: center;
+}
+
+.funnel-item.ventas {
+    background-color: #2196F3;
+}
+
+.funnel-item.ebitda {
+    background-color: #03A9F4;
+}
+
+.funnel-item.ebit {
+    background-color: #00BCD4;
+}
+
+.funnel-item.resultado-financiero {
+    background-color: #4CAF50;
+}
+
+.funnel-item.rdo-antes-impuestos {
+    background-color: #8BC34A;
+}
+
+.funnel-item.resultado {
+    background-color: #4CAF50;
+    clip-path: polygon(10% 0%, 90% 0%, 80% 100%, 20% 100%);
+}
+
+small {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 576px) {
+    .funnel-item {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="financial-funnel">
+            <div class="funnel-item ventas">
+                <div class="row">
+                    <div class="col-6">VENTAS</div>
+                    <div class="col-6 text-right">69.730.698 €<br><small>65.167.292 €</small></div>
+                </div>
+            </div>
+            <div class="funnel-item ebitda">
+                <div class="row">
+                    <div class="col-6">EBITDA</div>
+                    <div class="col-6 text-right">16.601.708 €<br><small>15.330.920 €</small></div>
+                </div>
+            </div>
+            <div class="funnel-item ebit">
+                <div class="row">
+                    <div class="col-6">EBIT</div>
+                    <div class="col-6 text-right">5.968.712 €<br><small>4.601.838 €</small></div>
+                </div>
+            </div>
+            <div class="funnel-item resultado-financiero">
+                <div class="row">
+                    <div class="col-6">RESULTADO FINANCIERO</div>
+                    <div class="col-6 text-right">3.293.433 €<br><small>3.292.551 €</small></div>
+                </div>
+            </div>
+            <div class="funnel-item rdo-antes-impuestos">
+                <div class="row">
+                    <div class="col-6">RDO. ANTES DE IMPUESTOS</div>
+                    <div class="col-6 text-right">9.262.145 €<br><small>7.894.389 €</small></div>
+                </div>
+            </div>
+            <div class="funnel-item resultado">
+                <div class="row">
+                    <div class="col-6">RESULTADO</div>
+                    <div class="col-6 text-right">7.216.903 €<br><small>6.498.900 €</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
