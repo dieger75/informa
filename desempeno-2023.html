@@ -745,11 +745,57 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="py-3 py-lg-5 ">
             <div class="container">
-                <div class="divider"></div>
+                <div class="row gx-lg-5">
+                    <div class="col-12 col-md-4 col-lg-5 px-md-5 d-none d-md-block">
+                        <div class="col line-1"></div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-2 px-md-4">
+                        <div class="col line-2 position-relative">
+                            <p class="text-primary-reverse m-0 number-top-pyramid"><strong>100</strong></p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-5 px-md-5 d-none d-md-block">
+                        <div class="col line-1"></div>
+                    </div>
+                </div>
             </div>
         </section>
+        <style>
+            .line-1, .line-2 {
+                height: 30px;
+                border-style: solid;
+                border-color: #f0f4f9;
+            }
+            .line-1 {
+                border-width: 0 3px 3px 3px;
+                border-radius: 0 0 5px 5px;
+            }
+            .line-2 {
+                border-width: 0 0 3px 0;
+            }
+            .box {
+                height: 60px;
+                width: 45px;
+                background-color: #1dc5f9;
+            }
+            .number-top-pyramid {
+                text-align: center;
+            }
+            @media screen and (min-width: 768px) {
+                .number-top-pyramid {
+                    position: absolute;
+                    top: 16px;
+                    left: -45px;
+                }
+            }
+            
+        </style>
         <!-- Pyramid Chart -->
         <section class="py-3 py-lg-5 p-graphic">
             <div class="container">
