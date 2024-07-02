@@ -127,6 +127,13 @@
         }
         
         /* ============ mobile view .end// ============ */
+
+        .bg-title {
+            background-image: url(/assets/images/informa-2023.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
     <link rel="preload" href="/assets/css/main/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/main/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -147,12 +154,22 @@
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top p-0" aria-label="Main navigation"></nav>
     <main class="">
-        <section id="quienes-somos" class="section">
+        <!-- Title page -->
+        <section class="section bg-title">
             <div class="container py-lg-5">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">INFORMA 2023 de un vistazo</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="informa-vistazo" class="py-3 py-lg-5">
+            <div class="container">
                 <div class="row">
                     <div class="overflow-hidden text-primary">
                         <div class="py-5 ps-5 animate__animated line-brand">
-                            <h2 class="mb-3">INFORMA 2023 de un vistazo</h2>
+                            <h2 class="mb-3">INFORMA de un vistazo</h2>
                         </div>
                     </div>
                 </div>
@@ -163,7 +180,7 @@
                         <img src="assets/icons/ind-economicos.svg" alt="" height="60px" loading="lazy">                      
                         <h3 class="text-white text-center py-3">Indicadores económicos</h3>
                         <div class="text-white">
-                            <ul>
+                            <ul class="list-point">
                                 <li><span class="h4">69.730.698€ </span>en ventas.</li>
                                 <li><span class="h4">7.216.903€ </span>resultado del ejercicio.</li>
                                 <li><span class="h4">16.601.708€ </span>EBITDA.</li>
@@ -174,7 +191,7 @@
                         <img src="assets/icons/equipo.svg" alt="" height="60px" loading="lazy">    
                         <h3 class="text-center py-3">Equipo</h3>
                         <div class="">
-                            <ul>
+                            <ul class="list-point">
                                 <li><span class="h4">354 </span>empleados</li>
                                 <li>NPS Empleados:<span class="h4"> 43%.</span></li>
                                 <li>Edad Media empleados:<span class="h4"> 50 años.</span></li>
@@ -186,7 +203,7 @@
                         <img src="assets/icons/clientes.svg" alt="" height="60px" loading="lazy">  
                         <h3 class="text-white text-center py-3">Clientes</h3>
                         <div class="text-white">
-                            <ul>
+                            <ul class="list-point">
                                 <li><span class="h4">4,45 </span>millones de usuarios.</li>
                                 <li>NPS:<span class="h4"> 57,7%.</span></li>
                                 <li><span class="h4">30 </span>millones páginas vistas al mes.</li>
@@ -197,7 +214,7 @@
                         <img src="assets/icons/base-datos.svg" alt="" height="60px" loading="lazy"> 
                         <h3 class="text-center py-3">Nuestra Base de Datos</h3>
                         <div class="">
-                            <ul>
+                            <ul class="list-point">
                                 <li><span class="h4">12,7 </span>millones de € invertidos en compra y
                                     tratamiento de la Información.</li>
                                 <li><span class="h4">7,5 </span>millones de agentes económicos.</li>
@@ -209,7 +226,7 @@
                         <img src="assets/icons/nuestro-entorno.svg" alt="" height="60px" loading="lazy">
                         <h3 class="text-white text-center py-3">Nuestro entorno</h3>
                         <div class="text-white">
-                            <ul>
+                            <ul class="list-point">
                                 <li><span class="h4">129.978€ </span>invertidos en proyectos sociales.</li>
                                 <li>El<span class="h4"> 40% </span>de la plantilla es miembro del Club de
                                     Voluntarios de INFORMA.</li>

@@ -131,6 +131,13 @@
         }
         
         /* ============ mobile view .end// ============ */
+
+        .bg-title {
+            background-image: url(/assets/images/path-through-mountain-forest-with-green-trees.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
     <link rel="preload" href="/assets/css/main/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/main/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -150,11 +157,30 @@
 </head>
 <body class="">
     <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top p-0" aria-label="Main navigation"></nav>
-    <main class="overflow-hidden">
+    <main class="">
+        <!-- Title page -->
+        <section class="section bg-title">
+            <div class="container py-lg-5">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">Carta de Bienvenida</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="" class="py-3 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Carta del CEO</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="" class="pb-3 pb-lg-5">
             <div class="container py-5">
-                <h2 class="text-center text-primary">Carta de Bienvenida</h2>
-                <div class="divider"></div>          
                 <div class="row">
                     <div class="col-lg-7 p-3 p-sm-5 px-lg-3 bg-r-tertiary">
                         <!-- Imagen con lazy loading -->
