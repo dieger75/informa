@@ -412,13 +412,19 @@ img {
     transform: translateY(-50%);
 }
 
-.list-point li::marker {
+.list-point li::marker{
     color: var(--bs-secondary);;
 }
 .list-point li {
     margin-bottom: 0.875rem;
+    list-style-type: disc;
 }
-
+ol {
+    list-style-type: decimal-leading-zero;
+}
+ol li::marker{
+    color: var(--bs-primary-reverse);;
+}
 /* icons ODS */
 @media screen and (min-width: 992px){
     .icon-ods {
