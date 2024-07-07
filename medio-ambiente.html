@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <!-- TITLE -->
+    <title>Medio Ambiente | Informa</title>
+
+    <!-- META DESCRIPTIONS -->
+    <meta name="description" content="Medio Ambiente | Informa">
+    <meta name="keywords" content="sostenibilidad, informe, Informa, Grupo Cesce">
+
+    <!-- CHARSET & VIEWPORT -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- AUTHOR -->
+    <meta name="author"
+        content="Diego Geraldo - Desarrollo Web y Gestión de Marca | diegogeraldo.com - hola@diegogeraldo.com">
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#1C4CDE">
+
+    <!-- SEO: Open Graph Tags -->
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Informe de Sostenibilidad | Informa">
+    <meta property="og:description" content="Informe de Sostenibilidad 2023 de Informa, una compañía de Grupo Cesce">
+    <meta property="og:site_name" content="Informa">
+    <meta property="og:url" content="https://rsc.informa.es/index.html">
+    <!-- <meta property="og:image" content="https://www.informa.es/assets/img/og-image.jpg"> -->
+
+    <!-- cambiar contenido de la imagen -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+
+    <!-- SEO: Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Informe de Sostenibilidad | Informa">
+    <meta name="twitter:description" content="Informe de Sostenibilidad 2023 de Informa, una compañía de Grupo Cesce">
+    <!-- <meta name="twitter:image" content="https://www.informa.es/assets/img/twitter-card.jpg"> -->
+
+    <!-- cambiar contenido de la imagen -->
+    <meta name="twitter:site" content="@informa_es">
+    <meta name="twitter:creator" content="@informa_es">
+
+    <!-- Robots -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/logos/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logos/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/logos/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/logos/apple-touch-icon-114x114.png">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/assets/fonts/noway/noway-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Load fonts using <noscript> -->
+    <noscript>
+        <link rel="stylesheet" href="/assets/fonts/noway/noway-bold.woff2">
+        <link rel="stylesheet" href="/assets/fonts/noway/noway-regular.woff2">
+        <link rel="stylesheet" href="/assets/fonts/roboto/roboto-regular.woff2">
+        <link rel="stylesheet" href="/assets/fonts/roboto/roboto-medium.woff2">
+    </noscript>
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/core/bootstrap-5.3.3/bootstrap.css">
+    </noscript>
+
+    <!-- Inline Critical CSS -->
+    <style type="text/css">
+        body {
+            display: none;
+            padding-top: 75px;
+        }
+
+        @media (max-width: 991.98px) {
+            .offcanvas-collapse {
+                position: fixed;
+                top: 77px;
+                /* Height of navbar */
+                bottom: 0;
+                left: 100%;
+                width: 100%;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                overflow-y: auto;
+                visibility: hidden;
+                background-color: #011e3d;
+                transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+            }
+
+            .offcanvas-collapse.open {
+                visibility: visible;
+                transform: translateX(-100%);
+            }
+        }
+
+        .nav-scroller .nav {
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .nav-scroller .nav-link {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: .875rem;
+            color: #6c757d;
+        }
+
+        .nav-scroller .nav-link:hover {
+            color: #007bff;
+        }
+
+        .nav-scroller .active {
+            font-weight: 500;
+            color: #343a40;
+        }
+
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .has-megamenu {
+                position: static !important;
+            }
+
+            .navbar .megamenu {
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin-top: -1px;
+            }
+        }
+
+        /* ============ mobile view .end// ============ */
+
+        .bg-title {
+            background-image: url(/assets/images/fingal-head-rocks.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="preload" href="/assets/css/main/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/main/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/main/animate.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/main/fonts.css">
+        <link rel="stylesheet" href="/assets/css/main/main.css">
+        <link rel="stylesheet" href="/assets/css/main/animate.min.css">
+    </noscript>
+
+    <!-- Load JS for IE8 Support -->
+    <!-- Incluye polyfills para soportar HTML5 y media queries en navegadores antiguos como IE8. -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top p-0" aria-label="Main navigation"></nav>
+    <main class="">
+        <section id="" class="section bg-title">
+            <div class="container py-lg-5">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">Medio ambiente</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="" class="py-3 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Nuestra Visión</h2>
+                        </div>
+                        <p class="lead text-primary-reverse animate__animated animate__fadeIn animate__delay-1s">Reconocemos que el cambio climático es un problema global, y trabajamos para su mitigación dentro de nuestro compromiso con el entorno que nos rodea.</p>
+                        <p class="lead text-primary-reverse animate__animated animate__fadeIn animate__delay-1s">Dentro de nuestras políticas de cuidado del medio ambiente, y siguiendo los Principios del Pacto Mundial y comprometidos con el cumplimiento de los Objetivos de Desarrollo Sostenible, minimizamos los impactos ambientales derivados de nuestra actividad a través de las siguientes acciones:</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Nuestra Vision -->
+        <section id="nuestra-vision" class="py-3 py-lg-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2 gx-lg-5">
+                    <!-- IMAGEN EQUIPO SOLIDO -->
+                    <div class="col mb-4 order-lg-2">
+                        <img src="/assets/images/forest-ground-flora-close-up-ecology-nature-macro.webp" alt="" height="100%" width="auto"
+                            class="object-fit-cover" style="object-position: 12% 0;" loading="lazy">
+                    </div>
+                    <div class="col">
+                        <!-- GESTIÓN DE RESIDUOS Y ECONOMÍA CIRCULAR -->
+                        <div class="col mb-4 mb-lg-5">
+                            <h4 class="text-primary-reverse mb-3">GESTIÓN DE RESIDUOS Y ECONOMÍA CIRCULAR</h4>
+                            <ul class="list-point">
+                                <li>Concienciación sobre el consumo de materiales, el reciclaje y la segregación de residuos a través de las guías de buenas prácticas ambientales.</li>
+                                <li>Uso de materiales reciclados</li>
+                            </ul>
+                        </div>
+                        <!-- CONTAMINACIÓN ATMOSFÉRICA -->
+                        <div class="col mb-4 mb-lg-5">
+                            <h4 class="text-primary-reverse mb-3">CONTAMINACIÓN ATMOSFÉRICA</h4>
+                            <ul class="list-point">
+                                <li>Cálculo de la huella de carbono de la organización.</li>
+                                <li>Concienciación a nuestros equipos de las emisiones totales de la organización y por empleado.</li>
+                                <li>Objetivos estratégicos de reducción de emisiones.</li>
+                                <li>Obtención del sello CeroCO².</li>
+                            </ul>
+                        </div>
+                        <!-- PROTECCIÓN DE LA BIODIVERSIDAD -->
+                        <div class="col mb-4 mb-lg-5">
+                            <h4 class="text-primary-reverse mb-3">PROTECCIÓN DE LA BIODIVERSIDAD</h4>
+                            <ul class="list-point">
+                                <li>Compensación de emisiones a través de proyectos de reforestación.</li>                                
+                            </ul>
+                        </div>
+                        <!--CUMPLIMIENTO LEGAL Y NORMATIVO -->
+                        <div class="col mb-4 mb-lg-5">
+                            <h4 class="text-primary-reverse mb-3">CUMPLIMIENTO LEGAL Y NORMATIVO</h4>
+                            <ul class="list-point">
+                                <li>Cumplimiento de requisitos legales (normativas europeas, nacionales, comunitarias y locales).</li>
+                                <li>Mantenimiento de los sistemas de gestión ISO 14001 e ISO 9001.</li>
+                                <li>Mantenimiento del manual de gestión de la calidad y gestión ambiental.</li>
+                                <li>Análisis de riesgos y oportunidades.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Políticas y Sistemas de Gestión -->
+        <section id="politicas-sistemas-gestion" class="py-3 py-lg-5 bg-tertiary">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3 text-primary-light">Políticas y Sistemas de Gestión</h2>
+                        </div>
+                        <p class="lead text-white animate__animated animate__fadeIn animate__delay-1s">Desde el año 2012, contamos con un Sistema de Gestión Ambiental (SGA) certificado según la Norma Internacional ISO 14001. También estamos certificados en la Norma ISO 9001.</p>
+                    </div>
+                </div>
+                <div class="row g-lg-5 py-5">
+                    <div class="col text-white">
+                        <p>Al disponer de sistemas de gestión certificados tenemos un correcto control de la información documentada y estamos en mejora continua para seguir ejerciendo un buen desempeño ambiental. Tal y como establece este modelo, hemos identificado y determinado los aspectos ambientales de nuestra actividad.</p>
+                        <p>Residuos no peligrosos: papel, plástico, orgánicos.</p>
+                        <p>Residuos peligrosos: fluorescentes, pilas.</p>
+                        <p>Residuos de aparatos eléctricos y electrónicos (RAEE): equipos de informática, cartuchos de tinta de las impresoras, tóneres usados. Consumos: de agua, de energía eléctrica, de papel, de combustible de vehículos.</p>
+                        <p>Vertido de agua sanitaria.</p>
+                        <p>Emisiones: CO2 y ruido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Residuos -->
+        <section id="residuos" class="py-3 py-lg-5 bg-gray-10">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Residuos</h2>
+                        </div>
+                        <p class="lead text-primary-reverse animate__animated animate__fadeIn animate__delay-1s">El reciclaje de residuos, así como la reutilización de materiales, la adopción de tecnologías más eficientes y la promoción de prácticas sostenibles, son componentes fundamentales de nuestra estrategia ambiental.</p>
+                    </div>
+                </div>
+                <div class="row g-lg-5 py-5">
+                    <div class="col">
+                        <p>Los residuos peligrosos y de aparatos eléctricos y electrónicos generados son recogidos y gestionados fuera de nuestras instalaciones por las empresas suministradoras de los productos. Todas las empresas aportan las autorizaciones necesarias y cumplen con la normativa ambiental vigente. INFORMA vela por recopilar todas las evidencias documentales que aseguren el correcto cumplimiento de la legislación ambiental tras cada retirada de residuos. Este año hemos vendido gran cantidad de equipos de informática a una empresa de comercialización de sistemas informáticos para su reciclaje y reutilización como elementos reacondicionados, prologando así su vida útil y consolidando nuestro compromiso con el medio ambiente. Además, el operador logístico encargado de la recogida capilar de residuos de tóner ha implementado en 2022 como novedad dirigida a reducir la huella de carbono de la actividad de recogida, la reposición automática de contenedor vacío por cada contenedor lleno retirado, reduciendo así el número de viajes.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Relación con proveedores -->
+        <section id="relacion-proveedores" class="py-3 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Relación con proveedores</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-lg-5 py-5">
+                    <div class="col">
+                        <p>Nuestro proceso de gestión de proveedores define el sistema establecido para la evaluación y el seguimiento de los proveedores de productos y/o servicios que adquirimos.</p<p>De esta manera verificamos el proceso de compra, estableciendo los requisitos que deben cumplir los proveedores que afecten o puedan afectar al ámbito de medio ambiente.</p>
+                        <p>Además, deben firmar el compromiso ambiental que incluye nuestra política estratégica, una guía de buenas prácticas ambientales y una carta de compromiso, así como el cumplimiento de la legislación ambiental aplicable a la actividad.</p>
+                        <p>Trabajamos en conjunto con nuestros proveedores para buscar nuevas formas de reducir las emisiones asociadas al transporte de compra y recogida de residuos asociados, y del tratamiento y disposición de los residuos generados al final de la vida útil de los productos.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Relación con nuestros clientes -->
+        <section id="relacion-clientes" class="py-3 py-lg-5 bg-tertiary">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3 text-primary-light">Relación con nuestros clientes</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-lg-5 py-5">
+                    <div class="col text-white">
+                        <p>En nuestro compromiso en la comunicación y divulgación de la información con nuestros grupos de interés, damos respuesta a las cuestiones de sostenibilidad solicitadas por los clientes alineados con nuestro departamento comercial.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Huella de Carbono -->
+        <section id="huella-carbono" class="py-3 py-lg-5 bg-gray-10">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Huella de Carbono</h2>
+                        </div>
+                        <p class="lead text-primary-reverse animate__animated animate__fadeIn animate__delay-1s">Calculamos desde el año 2015 nuestra huella de carbono en
+                            los alcances 1, 2 y 3, siguiendo la metodología Greenhouse Gas Protocol Corporate Standard (GHG Protocol), desarrollada por World Resources Institute (Instituto de Recursos Mundiales) y World Business Council for Sustainable Development (Consejo Empresarial Mundial para el Desarrollo Sostenible).</p>
+                    </div>
+                </div>
+                <div class="row g-lg-5 py-5">
+                    <div class="col">
+                        <p>Además, desde ese año nuestro cálculo ha sido verificado y certificado por una entidad externa, la Fundación Ecología y Desarrollo (ECODES), con quien llevamos años obteniendo el sello de “huella de carbono verificada”.</p>
+                        <p>Del análisis por alcances de 2023 se extrae que el 99,31% de las emisiones de INFORMA se corresponden con las emisiones indirectas englobadas en el alcance 3 y debidas la gran mayoría a los viajes de negocios. Desde hace unos años, nuestro suministrador de energía tiene que reunir el requisito y comprometerse mediante una declaración responsable, de que la energía suministrada durante toda la vigencia del contrato será de origen 100% renovable y/o de cogeneración de alta eficiencia, acompañado del correspondiente Certificado de Garantía de Origen expedido por la Comisión Nacional del Mercado y la Competencia..</p>
+                        <ul class="list-point">
+                            <li><strong>Alcance 1:</strong> 0%</li>
+                            <li><strong>Alcance 2:</strong> 0,69%</li>
+                            <li><strong>Alcance 3:</strong> 99,31%</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Compensación -->
+        <section id="compensacion" class="py-3 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="overflow-hidden text-primary">
+                        <div class="py-5 ps-5 animate__animated line-brand">
+                            <h2 class="mb-3">Compensación</h2>
+                        </div>
+                        <p class="lead text-primary-reverse animate__animated animate__fadeIn animate__delay-1s">Calculamos desde el año 2015 nuestra huella de carbono en
+                            los alcances 1, 2 y 3, siguiendo la metodología Greenhouse Gas Protocol Corporate Standard (GHG Protocol), desarrollada por World Resources Institute (Instituto de Recursos Mundiales) y World Business Council for Sustainable Development (Consejo Empresarial Mundial para el Desarrollo Sostenible).</p>
+                    </div>
+                </div>
+                <div class="row g-lg-5 pt-lg-5">
+                    <div class="col">
+                        <p>Formamos parte de la iniciativa CeroCO2 promovida por la ONG ECODES, donde aportamos voluntariamente la cantidad económica proporcional a las toneladas de CO2 generadas en el año a proyectos de sumidero de carbono por reforestación o proyectos de deforestación evitada. Los proyectos están verificados de acuerdo a estándares del Mercado Voluntario de Carbono.</p>
+                </div>
+                <div class="d-flex justify-content-end py-5">
+                    <a href="desempeno-ambiental.html" type="button" class="btn btn-primary">Desempeño ambiental 2023</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="bg-primary py-5"></footer>
+    <!-- JQuery Core y Bootstrap -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Función para cargar HTML en un elemento con una función de callback
+            function loadHTML(elementId, url, callback) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                        document.body.style.display = 'block'; // Mostrar el cuerpo después de cargar el header
+                        if (callback) {
+                            callback();
+                        }
+                        // Reinicializar comportamientos de ancla
+                        initializeAnchors();
+                        // Desplazar a la ancla si hay un hash en la URL
+                        if (window.location.hash) {
+                            const anchor = document.querySelector(window.location.hash);
+                            if (anchor) {
+                                anchor.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+            }
+
+            // Inicializar comportamientos de ancla
+            function initializeAnchors() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        // Prevenir el comportamiento predeterminado del ancla
+                        e.preventDefault();
+
+                        // Actualizar el hash en la URL
+                        history.pushState(null, null, this.getAttribute('href'));
+
+                        // Desplazar suavemente hacia el elemento correspondiente
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Carga el header desde partials/header.html y añade el event listener una vez cargado
+            loadHTML("navbar", "partials/navbar.html", function () {
+                document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
+                    document.querySelector('.offcanvas-collapse').classList.toggle('open');
+                });
+                // Añadir event listeners a los enlaces del menú
+                document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(function (element) {
+                    element.addEventListener('click', function (event) {
+                        // Solo cerrar el menú si el enlace no es parte de un dropdown
+                        if (!event.target.closest('.dropdown-toggle')) {
+                            document.querySelector('.offcanvas-collapse').classList.remove('open');
+                        }
+                    });
+                });
+            });
+
+            // Carga el footer desde partials/footer.html
+            loadHTML("footer", "partials/footer.html");
+        });
+    </script>
+    <script src="/assets/js/core/bootstrap-5.3.3/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/main/lazyload.js" defer></script>
+    <script src="assets/js/main/main.js" defer></script>
+    <script src="assets/js/main/navbar-scroll.js" defer></script>
+</body>
+
+</html>

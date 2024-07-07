@@ -190,7 +190,7 @@ img {
 .bg-gray-10 {
     --bs-bg-opacity: 0.1;
     /* background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)); */
-    background-color: #E9EDFA;
+    background-color: #E9EDFA !important; 
 }
 @media screen and (min-width: 992px) {
     .bg-r-tertiary {
