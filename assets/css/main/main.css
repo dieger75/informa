@@ -16,9 +16,27 @@ section {
         padding-bottom: 4vw;
     }
 }
+#footer {
+    position: relative;
+    z-index: 1;
+}
+#footer a:hover {
+    color: var(--bs-primary-light) !important;
+    transition: all 200ms;
+}
+#footer #rrss a img{
+    transition: all 200ms;
+}
+#footer #rrss a:hover img {
+    transform: scale(1.1);
+    transition: all 200ms;
+}
 /************************
  * BARRA DE NAVEGACION 
  *********************** */
+#navbarsExampleDefault a.nav-link:hover {
+    color: var(--bs-primary-light) !important;
+}
 #navbar a {
     font-family: "Noway";
 }

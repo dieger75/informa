@@ -15,7 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- AUTHOR -->
-    <meta name="author" content="Diego Geraldo - Desarrollo Web y Gestión de Marca | diegogeraldo.com - hola@diegogeraldo.com">
+    <meta name="author"
+        content="Diego Geraldo - Desarrollo Web y Gestión de Marca | diegogeraldo.com - hola@diegogeraldo.com">
 
     <!-- THEME COLOR -->
     <meta name="theme-color" content="#1C4CDE">
@@ -54,9 +55,12 @@
 
     <!-- Preload critical fonts -->
     <link rel="preload" href="/assets/fonts/noway/noway-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/noway/noway-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/roboto/roboto-medium.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
     <!-- Load fonts using <noscript> -->
     <noscript>
         <link rel="stylesheet" href="/assets/fonts/noway/noway-bold.woff2">
@@ -77,6 +81,7 @@
             display: none;
             padding-top: 75px;
         }
+
         @media (max-width: 991.98px) {
             .offcanvas-collapse {
                 position: fixed;
@@ -92,32 +97,39 @@
                 background-color: #011e3d;
                 transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             }
+
             .offcanvas-collapse.open {
                 visibility: visible;
                 transform: translateX(-100%);
             }
         }
+
         .nav-scroller .nav {
             color: rgba(255, 255, 255, .75);
         }
+
         .nav-scroller .nav-link {
             padding-top: .75rem;
             padding-bottom: .75rem;
             font-size: .875rem;
             color: #6c757d;
         }
+
         .nav-scroller .nav-link:hover {
             color: #007bff;
         }
+
         .nav-scroller .active {
             font-weight: 500;
             color: #343a40;
         }
+
         /* ============ desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .has-megamenu {
                 position: static !important;
             }
+
             .navbar .megamenu {
                 left: 0;
                 right: 0;
@@ -125,7 +137,7 @@
                 margin-top: -1px;
             }
         }
-        
+
         /* ============ mobile view .end// ============ */
 
         .bg-title {
@@ -137,12 +149,13 @@
     </style>
     <link rel="preload" href="/assets/css/main/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/assets/css/main/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/assets/css/main/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/main/animate.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/assets/css/main/fonts.css">
         <link rel="stylesheet" href="/assets/css/main/main.css">
         <link rel="stylesheet" href="/assets/css/main/animate.min.css">
-    </noscript>       
+    </noscript>
 
     <!-- Load JS for IE8 Support -->
     <!-- Incluye polyfills para soportar HTML5 y media queries en navegadores antiguos como IE8. -->
@@ -151,6 +164,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
+
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg bg-white fixed-top p-0" aria-label="Main navigation"></nav>
     <main class="">
@@ -177,7 +191,7 @@
             <div class="container py-lg-5">
                 <div class="row">
                     <div class="col-lg-6 p-4 p-lg-5 bg-tertiary d-flex flex-column align-items-center">
-                        <img src="assets/icons/ind-economicos.svg" alt="" height="60px" loading="lazy">                      
+                        <img src="assets/icons/ind-economicos.svg" alt="" height="60px" loading="lazy">
                         <h3 class="text-white text-center py-3">Indicadores económicos</h3>
                         <div class="text-white">
                             <ul class="list-point">
@@ -188,7 +202,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 p-4 p-lg-5 bg-gray-10 d-flex flex-column align-items-center">
-                        <img src="assets/icons/equipo.svg" alt="" height="60px" loading="lazy">    
+                        <img src="assets/icons/equipo.svg" alt="" height="60px" loading="lazy">
                         <h3 class="text-center py-3">Equipo</h3>
                         <div class="">
                             <ul class="list-point">
@@ -200,7 +214,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 p-4 p-lg-5 d-flex bg-tertiary flex-column align-items-center order-lg-2">
-                        <img src="assets/icons/clientes.svg" alt="" height="60px" loading="lazy">  
+                        <img src="assets/icons/clientes.svg" alt="" height="60px" loading="lazy">
                         <h3 class="text-white text-center py-3">Clientes</h3>
                         <div class="text-white">
                             <ul class="list-point">
@@ -211,7 +225,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 p-4 p-lg-5 bg-gray-10 d-flex flex-column align-items-center order-lg-1">
-                        <img src="assets/icons/base-datos.svg" alt="" height="60px" loading="lazy"> 
+                        <img src="assets/icons/base-datos.svg" alt="" height="60px" loading="lazy">
                         <h3 class="text-center py-3">Nuestra Base de Datos</h3>
                         <div class="">
                             <ul class="list-point">
@@ -242,7 +256,7 @@
         </section>
     </main>
 
-    <footer id="footer" class="bg-primary py-5"></footer>
+    <footer id="footer" class="bg-primary pt-5"></footer>
     <!-- JQuery Core y Bootstrap -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -275,17 +289,17 @@
                         console.error('There was a problem with the fetch operation:', error);
                     });
             }
-        
+
             // Inicializar comportamientos de ancla
             function initializeAnchors() {
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', function (e) {
                         // Prevenir el comportamiento predeterminado del ancla
                         e.preventDefault();
-        
+
                         // Actualizar el hash en la URL
                         history.pushState(null, null, this.getAttribute('href'));
-        
+
                         // Desplazar suavemente hacia el elemento correspondiente
                         const target = document.querySelector(this.getAttribute('href'));
                         if (target) {
@@ -296,7 +310,7 @@
                     });
                 });
             }
-        
+
             // Carga el header desde partials/header.html y añade el event listener una vez cargado
             loadHTML("navbar", "partials/navbar.html", function () {
                 document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
@@ -312,7 +326,7 @@
                     });
                 });
             });
-        
+
             // Carga el footer desde partials/footer.html
             loadHTML("footer", "partials/footer.html");
         });
